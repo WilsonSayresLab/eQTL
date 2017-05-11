@@ -1,1947 +1,1709 @@
 {
+
   "GRCh37_lite_ref_path": "",
-  "GRCh37_lite_ref_prefix: "",
+  "GRCh37_lite_ref_prefix": "",
   "GRCh38_ref_path": "reference/Homo_sapiens_assembly38.fasta",
   "GRCh38_ref_prefix": "Homo_sapiens_assembly38",
-  "tcga_lihc_rnaseq_fastq_dir": "/mnt/storage/CANCER_DOWNLOADS/LIHCFILES/data/rna/sequences_data/",
-  "tcga_lihc_rnaseq_alignment_dir": "/mnt/storage/CANCER_DOWNLOADS/LIHCFILES/RNAseq_realignment/",
+  "gtf_path": "path",
+  "star_ref_dir": "path",
+  "tcga_lihc_rnaseq_fastq_dir": "/mnt/storage/CANCER_DOWNLOADS/LIHCFILES/data/rna/sequences_data",
+  "tcga_lihc_rnaseq_alignment_dir": "/mnt/storage/CANCER_DOWNLOADS/LIHCFILES/RNAseq_realignment",
 
-  "tcga_rnaseq_fastqs": [
-    "TCGA-BC-4072-01B-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-BC-4072-01B-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-BC-4073-01B-02R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-4073-01B-02R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10R-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10R-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10R-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10R-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10S-01A-22R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10S-01A-22R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10T-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10T-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10T-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10T-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10U-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10U-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10U-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10U-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10W-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10W-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10W-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10W-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10X-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10X-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10X-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10X-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A110-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A110-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A112-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-BC-A112-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-BC-A216-01A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-BC-A216-01A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-BC-A216-11A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-BC-A216-11A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-BC-A217-01A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-BC-A217-01A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-BC-A69H-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-BC-A69H-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-BC-A69I-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-BC-A69I-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_1.fastq",
-    "TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_2.fastq",
-    "TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_1.fastq",
-    "TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_2.fastq",
-    "TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-CC-5258-01A-01R-A131-07_rna_seq_1.fastq",
-    "TCGA-CC-5258-01A-01R-A131-07_rna_seq_2.fastq",
-    "TCGA-CC-5259-01A-31R-A213-07_rna_seq_1.fastq",
-    "TCGA-CC-5259-01A-31R-A213-07_rna_seq_2.fastq",
-    "TCGA-CC-5260-01A-01R-A131-07_rna_seq_1.fastq",
-    "TCGA-CC-5260-01A-01R-A131-07_rna_seq_2.fastq",
-    "TCGA-CC-5261-01A-01R-A131-07_rna_seq_1.fastq",
-    "TCGA-CC-5261-01A-01R-A131-07_rna_seq_2.fastq",
-    "TCGA-CC-5262-01A-01R-A131-07_rna_seq_1.fastq",
-    "TCGA-CC-5262-01A-01R-A131-07_rna_seq_2.fastq",
-    "TCGA-CC-5263-01A-01R-A131-07_rna_seq_1.fastq",
-    "TCGA-CC-5263-01A-01R-A131-07_rna_seq_2.fastq",
-    "TCGA-CC-5264-01A-01R-A131-07_rna_seq_1.fastq",
-    "TCGA-CC-5264-01A-01R-A131-07_rna_seq_2.fastq",
-    "TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-DD-A113-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A113-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A113-11A-12R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A113-11A-12R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A114-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A114-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A114-11A-12R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A114-11A-12R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A115-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A115-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A116-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A116-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A116-11A-12R-A26B-07_rna_seq_1.fastq",
-    "TCGA-DD-A116-11A-12R-A26B-07_rna_seq_2.fastq",
-    "TCGA-DD-A118-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A118-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A118-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A118-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A119-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A119-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A119-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A119-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11A-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11A-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11A-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11A-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11B-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11B-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11B-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11B-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11C-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11C-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11C-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11C-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11D-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11D-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A11D-11A-12R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A11D-11A-12R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_1.fastq",
-    "TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_2.fastq",
-    "TCGA-DD-A39V-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39V-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39V-11A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39V-11A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39W-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39W-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39W-11A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39W-11A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39X-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39X-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39X-11A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39X-11A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_2.fastq",
-    "TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_1.fastq",
-    "TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_2.fastq",
-    "TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_1.fastq",
-    "TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_2.fastq",
-    "TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_1.fastq",
-    "TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_2.fastq",
-    "TCGA-ED-A459-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-ED-A459-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-ED-A627-01A-12R-A311-07_rna_seq_1.fastq",
-    "TCGA-ED-A627-01A-12R-A311-07_rna_seq_2.fastq",
-    "TCGA-ED-A66X-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-ED-A66X-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-EP-A12J-01A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-EP-A12J-01A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-EP-A12J-11A-11R-A131-07_rna_seq_1.fastq",
-    "TCGA-EP-A12J-11A-11R-A131-07_rna_seq_2.fastq",
-    "TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_1.fastq",
-    "TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_2.fastq",
-    "TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_1.fastq",
-    "TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_2.fastq",
-    "TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_1.fastq",
-    "TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_2.fastq",
-    "TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_1.fastq",
-    "TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_2.fastq",
-    "TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_1.fastq",
-    "TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_2.fastq",
-    "TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_1.fastq",
-    "TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_2.fastq",
-    "TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-FV-A495-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-FV-A495-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-FV-A496-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-FV-A496-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_1.fastq",
-    "TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_2.fastq",
-    "TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_1.fastq",
-    "TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_2.fastq",
-    "TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_1.fastq",
-    "TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_2.fastq",
-    "TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_1.fastq",
-    "TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_2.fastq",
-    "TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_1.fastq",
-    "TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_2.fastq",
-    "TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_1.fastq",
-    "TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_2.fastq",
-    "TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_1.fastq",
-    "TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_2.fastq",
-    "TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_1.fastq",
-    "TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_2.fastq",
-    "TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_1.fastq",
-    "TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_2.fastq",
-    "TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-MR-A520-01A-11R-A266-07_rna_seq_1.fastq",
-    "TCGA-MR-A520-01A-11R-A266-07_rna_seq_2.fastq",
-    "TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_1.fastq",
-    "TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_2.fastq",
-    "TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_1.fastq",
-    "TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_2.fastq",
-    "TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_2.fastq",
-    "TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_1.fastq",
-    "TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_2.fastq"
-  ],
+  "TCGA-ED-A459-01A-11R-A266-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-ED-A459"],
+  "fq2": ["TCGA-ED-A459-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ED-A459-01A-11R-A266-07_rna_seq_1.fastq"]},
 
-  "fastq_prefixes": [
-    "TCGA-BC-4072-01B-11R-A155-07_rna_seq_1",
-    "TCGA-BC-4072-01B-11R-A155-07_rna_seq_2",
-    "TCGA-BC-4073-01B-02R-A131-07_rna_seq_1",
-    "TCGA-BC-4073-01B-02R-A131-07_rna_seq_2",
-    "TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10R-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10R-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10R-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10R-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10S-01A-22R-A131-07_rna_seq_1",
-    "TCGA-BC-A10S-01A-22R-A131-07_rna_seq_2",
-    "TCGA-BC-A10T-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10T-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10T-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10T-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10U-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10U-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10U-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10U-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10W-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10W-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10W-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10W-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10X-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10X-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10X-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10X-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A110-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A110-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A110-11A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A112-01A-11R-A131-07_rna_seq_1",
-    "TCGA-BC-A112-01A-11R-A131-07_rna_seq_2",
-    "TCGA-BC-A216-01A-11R-A155-07_rna_seq_1",
-    "TCGA-BC-A216-01A-11R-A155-07_rna_seq_2",
-    "TCGA-BC-A216-11A-11R-A155-07_rna_seq_1",
-    "TCGA-BC-A216-11A-11R-A155-07_rna_seq_2",
-    "TCGA-BC-A217-01A-11R-A155-07_rna_seq_1",
-    "TCGA-BC-A217-01A-11R-A155-07_rna_seq_2",
-    "TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_1",
-    "TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_2",
-    "TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_1",
-    "TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_2",
-    "TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-BC-A69H-01A-11R-A311-07_rna_seq_1",
-    "TCGA-BC-A69H-01A-11R-A311-07_rna_seq_2",
-    "TCGA-BC-A69I-01A-11R-A311-07_rna_seq_1",
-    "TCGA-BC-A69I-01A-11R-A311-07_rna_seq_2",
-    "TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_1",
-    "TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_2",
-    "TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_1",
-    "TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_2",
-    "TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_1",
-    "TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_2",
-    "TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_1",
-    "TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_2",
-    "TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-CC-5258-01A-01R-A131-07_rna_seq_1",
-    "TCGA-CC-5258-01A-01R-A131-07_rna_seq_2",
-    "TCGA-CC-5259-01A-31R-A213-07_rna_seq_1",
-    "TCGA-CC-5259-01A-31R-A213-07_rna_seq_2",
-    "TCGA-CC-5260-01A-01R-A131-07_rna_seq_1",
-    "TCGA-CC-5260-01A-01R-A131-07_rna_seq_2",
-    "TCGA-CC-5261-01A-01R-A131-07_rna_seq_1",
-    "TCGA-CC-5261-01A-01R-A131-07_rna_seq_2",
-    "TCGA-CC-5262-01A-01R-A131-07_rna_seq_1",
-    "TCGA-CC-5262-01A-01R-A131-07_rna_seq_2",
-    "TCGA-CC-5263-01A-01R-A131-07_rna_seq_1",
-    "TCGA-CC-5263-01A-01R-A131-07_rna_seq_2",
-    "TCGA-CC-5264-01A-01R-A131-07_rna_seq_1",
-    "TCGA-CC-5264-01A-01R-A131-07_rna_seq_2",
-    "TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_1",
-    "TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_2",
-    "TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_1",
-    "TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_2",
-    "TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_1",
-    "TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_2",
-    "TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_1",
-    "TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_2",
-    "TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-DD-A113-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A113-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A113-11A-12R-A131-07_rna_seq_1",
-    "TCGA-DD-A113-11A-12R-A131-07_rna_seq_2",
-    "TCGA-DD-A114-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A114-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A114-11A-12R-A131-07_rna_seq_1",
-    "TCGA-DD-A114-11A-12R-A131-07_rna_seq_2",
-    "TCGA-DD-A115-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A115-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A116-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A116-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A116-11A-12R-A26B-07_rna_seq_1",
-    "TCGA-DD-A116-11A-12R-A26B-07_rna_seq_2",
-    "TCGA-DD-A118-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A118-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A118-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A118-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A119-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A119-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A119-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A119-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11A-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A11A-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11A-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A11A-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11B-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A11B-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11B-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A11B-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11C-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A11C-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11C-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A11C-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11D-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A11D-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A11D-11A-12R-A131-07_rna_seq_1",
-    "TCGA-DD-A11D-11A-12R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_1",
-    "TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_2",
-    "TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_1",
-    "TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_2",
-    "TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_1",
-    "TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_2",
-    "TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_1",
-    "TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_2",
-    "TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_1",
-    "TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_2",
-    "TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_1",
-    "TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_2",
-    "TCGA-DD-A39V-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39V-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39V-11A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39V-11A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39W-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39W-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39W-11A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39W-11A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39X-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39X-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39X-11A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39X-11A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_1",
-    "TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_2",
-    "TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_1",
-    "TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_2",
-    "TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_1",
-    "TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_2",
-    "TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_1",
-    "TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_2",
-    "TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_1",
-    "TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_2",
-    "TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_1",
-    "TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_2",
-    "TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_1",
-    "TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_2",
-    "TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_1",
-    "TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_2",
-    "TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_1",
-    "TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_2",
-    "TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_1",
-    "TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_2",
-    "TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_1",
-    "TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_2",
-    "TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_1",
-    "TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_2",
-    "TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_1",
-    "TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_2",
-    "TCGA-ED-A459-01A-11R-A266-07_rna_seq_1",
-    "TCGA-ED-A459-01A-11R-A266-07_rna_seq_2",
-    "TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_1",
-    "TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_2",
-    "TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-ED-A627-01A-12R-A311-07_rna_seq_1",
-    "TCGA-ED-A627-01A-12R-A311-07_rna_seq_2",
-    "TCGA-ED-A66X-01A-11R-A311-07_rna_seq_1",
-    "TCGA-ED-A66X-01A-11R-A311-07_rna_seq_2",
-    "TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_1",
-    "TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_2",
-    "TCGA-EP-A12J-01A-11R-A131-07_rna_seq_1",
-    "TCGA-EP-A12J-01A-11R-A131-07_rna_seq_2",
-    "TCGA-EP-A12J-11A-11R-A131-07_rna_seq_1",
-    "TCGA-EP-A12J-11A-11R-A131-07_rna_seq_2",
-    "TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_1",
-    "TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_2",
-    "TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_1",
-    "TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_2",
-    "TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_1",
-    "TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_2",
-    "TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_1",
-    "TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_2",
-    "TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_1",
-    "TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_2",
-    "TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_1",
-    "TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_2",
-    "TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_1",
-    "TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_2",
-    "TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_1",
-    "TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_2",
-    "TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_1",
-    "TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_2",
-    "TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_1",
-    "TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_2",
-    "TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_1",
-    "TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_2",
-    "TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-FV-A495-01A-11R-A266-07_rna_seq_1",
-    "TCGA-FV-A495-01A-11R-A266-07_rna_seq_2",
-    "TCGA-FV-A496-01A-11R-A266-07_rna_seq_1",
-    "TCGA-FV-A496-01A-11R-A266-07_rna_seq_2",
-    "TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_1",
-    "TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_2",
-    "TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_1",
-    "TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_2",
-    "TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_1",
-    "TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_2",
-    "TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_1",
-    "TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_2",
-    "TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_1",
-    "TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_2",
-    "TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_1",
-    "TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_2",
-    "TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_1",
-    "TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_2",
-    "TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_1",
-    "TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_2",
-    "TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_1",
-    "TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_2",
-    "TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_1",
-    "TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_2",
-    "TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_1",
-    "TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_2",
-    "TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_1",
-    "TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_2",
-    "TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_1",
-    "TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_2",
-    "TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_1",
-    "TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_2",
-    "TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_1",
-    "TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_2",
-    "TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-MR-A520-01A-11R-A266-07_rna_seq_1",
-    "TCGA-MR-A520-01A-11R-A266-07_rna_seq_2",
-    "TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_1",
-    "TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_2",
-    "TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_1",
-    "TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_2",
-    "TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_2",
-    "TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_1",
-    "TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_2"
-  ],
+  "TCGA-DD-A1EB-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EB"],
+  "fq2": ["TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_1.fastq"]},
 
-  "paired_end_samples":[
-    "TCGA-ED-A459-01A-11R-A266-07",
-    "TCGA-DD-A1EB-01A-11R-A131-07",
-    "TCGA-DD-A11A-01A-11R-A131-07",
-    "TCGA-DD-A4NA-01A-11R-A266-07",
-    "TCGA-DD-A113-01A-11R-A131-07",
-    "TCGA-DD-A116-01A-11R-A131-07",
-    "TCGA-DD-A4NJ-01A-11R-A27V-07",
-    "TCGA-DD-A3A8-01A-11R-A22L-07",
-    "TCGA-DD-A39X-11A-11R-A213-07",
-    "TCGA-DD-A4NI-01A-11R-A27V-07",
-    "TCGA-CC-A3M9-01A-11R-A213-07",
-    "TCGA-DD-A1EC-11A-11R-A131-07",
-    "TCGA-RC-A6M4-01A-11R-A32O-07",
-    "TCGA-DD-A1EI-11A-11R-A131-07",
-    "TCGA-G3-A5SJ-01A-11R-A27V-07",
-    "TCGA-DD-A114-11A-12R-A131-07",
-    "TCGA-MR-A520-01A-11R-A266-07",
-    "TCGA-BC-A10Z-01A-11R-A131-07",
-    "TCGA-BC-A112-01A-11R-A131-07",
-    "TCGA-DD-A11C-11A-11R-A131-07",
-    "TCGA-BC-A3KG-01A-11R-A213-07",
-    "TCGA-DD-A3A8-11A-11R-A22L-07",
-    "TCGA-QA-A7B7-01A-11R-A32O-07",
-    "TCGA-BC-A10Y-11A-11R-A131-07",
-    "TCGA-FV-A3I0-01A-11R-A22L-07",
-    "TCGA-CC-A5UD-01A-11R-A28V-07",
-    "TCGA-BC-A10R-11A-11R-A131-07",
-    "TCGA-BC-A217-01A-11R-A155-07",
-    "TCGA-FV-A3R2-11A-11R-A22L-07",
-    "TCGA-CC-5264-01A-01R-A131-07",
-    "TCGA-CC-5258-01A-01R-A131-07",
-    "TCGA-DD-A4NG-01A-11R-A27V-07",
-    "TCGA-BC-A10Q-01A-11R-A131-07",
-    "TCGA-MI-A75H-01A-11R-A32O-07",
-    "TCGA-HP-A5N0-01A-11R-A28V-07",
-    "TCGA-HP-A5MZ-01A-21R-A27V-07",
-    "TCGA-RC-A6M3-01A-11R-A32O-07",
-    "TCGA-DD-A4NS-01A-11R-A311-07",
-    "TCGA-CC-A3MC-01A-11R-A22L-07",
-    "TCGA-ED-A627-01A-12R-A311-07",
-    "TCGA-BC-A10W-11A-11R-A131-07",
-    "TCGA-LG-A6GG-01A-11R-A311-07",
-    "TCGA-BC-A10X-11A-11R-A131-07",
-    "TCGA-DD-A73B-01A-12R-A32O-07",
-    "TCGA-DD-A1ED-01A-11R-A155-07",
-    "TCGA-G3-A25Z-01A-11R-A16W-07",
-    "TCGA-DD-A3A3-11A-11R-A22L-07",
-    "TCGA-DD-A4NF-01A-11R-A27V-07",
-    "TCGA-ES-A2HT-11A-11R-A180-07",
-    "TCGA-ED-A5KG-01A-11R-A27V-07",
-    "TCGA-EP-A26S-01A-11R-A16W-07",
-    "TCGA-DD-A3A1-11A-11R-A213-07",
-    "TCGA-EP-A3RK-01A-11R-A22L-07",
-    "TCGA-T1-A6J8-01A-11R-A32O-07",
-    "TCGA-DD-A73F-01A-11R-A32O-07",
-    "TCGA-RC-A6M6-01A-11R-A32O-07",
-    "TCGA-MI-A75I-01A-11R-A32O-07",
-    "TCGA-DD-A4NP-01A-11R-A28V-07",
-    "TCGA-DD-A4NR-01A-11R-A311-07",
-    "TCGA-DD-A1EH-11A-11R-A131-07",
-    "TCGA-DD-A11D-01A-11R-A131-07",
-    "TCGA-FV-A2QQ-01A-11R-A22L-07",
-    "TCGA-G3-A3CK-01A-11R-A213-07",
-    "TCGA-EP-A3RK-11A-11R-A22L-07",
-    "TCGA-G3-A25T-01A-11R-A16W-07",
-    "TCGA-BC-A3KF-01A-11R-A213-07",
-    "TCGA-BD-A2L6-11A-21R-A213-07",
-    "TCGA-DD-A3A2-01A-11R-A213-07",
-    "TCGA-ES-A2HS-01A-11R-A180-07",
-    "TCGA-BW-A5NP-01A-11R-A27V-07",
-    "TCGA-NI-A4U2-01A-11R-A28V-07",
-    "TCGA-BC-A10U-11A-11R-A131-07",
-    "TCGA-CC-A5UC-01A-11R-A28V-07",
-    "TCGA-BC-A10Z-11A-11R-A131-07",
-    "TCGA-FV-A496-01A-11R-A266-07",
-    "TCGA-G3-A25Y-01A-11R-A16W-07",
-    "TCGA-DD-A1EL-01A-11R-A155-07",
-    "TCGA-BC-A216-11A-11R-A155-07",
-    "TCGA-O8-A75V-01A-11R-A32O-07",
-    "TCGA-DD-A114-01A-11R-A131-07",
-    "TCGA-ES-A2HT-01A-12R-A180-07",
-    "TCGA-BW-A5NQ-01A-11R-A27V-07",
-    "TCGA-DD-A73A-01A-12R-A32O-07",
-    "TCGA-BC-A110-11A-11R-A131-07",
-    "TCGA-BC-A10W-01A-11R-A131-07",
-    "TCGA-BC-A10R-01A-11R-A131-07",
-    "TCGA-G3-A3CH-01A-11R-A22L-07",
-    "TCGA-EP-A3JL-01A-11R-A213-07",
-    "TCGA-DD-A1EK-01A-11R-A213-07",
-    "TCGA-DD-A1EL-11A-11R-A155-07",
-    "TCGA-BD-A2L6-01A-11R-A213-07",
-    "TCGA-DD-A1EH-01A-11R-A131-07",
-    "TCGA-DD-A1EJ-01A-11R-A155-07",
-    "TCGA-DD-A1EA-01A-11R-A131-07",
-    "TCGA-RC-A6M5-01A-11R-A32O-07",
-    "TCGA-BD-A3EP-01A-11R-A22L-07",
-    "TCGA-DD-A3A5-11A-11R-A22L-07",
-    "TCGA-DD-A39W-01A-11R-A213-07",
-    "TCGA-DD-A39W-11A-11R-A213-07",
-    "TCGA-DD-A1EC-01A-21R-A131-07",
-    "TCGA-DD-A1EI-01A-11R-A131-07",
-    "TCGA-FV-A3R2-01A-11R-A22L-07",
-    "TCGA-DD-A116-11A-12R-A26B-07",
-    "TCGA-FV-A2QR-11A-11R-A213-07",
-    "TCGA-BC-A5W4-01A-11R-A28V-07",
-    "TCGA-FV-A4ZQ-01A-11R-A266-07",
-    "TCGA-DD-A4NQ-01A-21R-A28V-07",
-    "TCGA-DD-A39V-11A-11R-A213-07",
-    "TCGA-DD-A1EF-01A-11R-A131-07",
-    "TCGA-FV-A4ZP-01A-12R-A266-07",
-    "TCGA-DD-A39Z-11A-21R-A213-07",
-    "TCGA-DD-A4NV-01A-11R-A311-07",
-    "TCGA-G3-A3CH-11A-11R-A22L-07",
-    "TCGA-DD-A11C-01A-11R-A131-07",
-    "TCGA-FV-A3I1-01A-11R-A22L-07",
-    "TCGA-G3-A25X-01A-11R-A16W-07",
-    "TCGA-DD-A39V-01A-11R-A213-07",
-    "TCGA-FV-A3I0-11A-11R-A22L-07",
-    "TCGA-BC-4072-01B-11R-A155-07",
-    "TCGA-CC-5262-01A-01R-A131-07",
-    "TCGA-CC-A1HT-01A-11R-A131-07",
-    "TCGA-CC-5261-01A-01R-A131-07",
-    "TCGA-DD-A3A6-01A-11R-A22L-07",
-    "TCGA-MI-A75G-01A-11R-A32O-07",
-    "TCGA-ED-A4XI-01A-11R-A266-07",
-    "TCGA-DD-A11B-11A-11R-A131-07",
-    "TCGA-FV-A23B-01A-11R-A16W-07",
-    "TCGA-DD-A3A4-01A-11R-A22L-07",
-    "TCGA-EP-A26S-11A-12R-A16W-07",
-    "TCGA-DD-A118-11A-11R-A131-07",
-    "TCGA-PD-A5DF-01A-11R-A27V-07",
-    "TCGA-ED-A66X-01A-11R-A311-07",
-    "TCGA-K7-A6G5-01A-11R-A311-07",
-    "TCGA-DD-A39X-01A-11R-A213-07",
-    "TCGA-CC-5259-01A-31R-A213-07",
-    "TCGA-DD-A1EE-01A-11R-A131-07",
-    "TCGA-CC-A3MA-01A-11R-A213-07",
-    "TCGA-G3-A25V-01A-11R-A16W-07",
-    "TCGA-BC-A69I-01A-11R-A311-07",
-    "TCGA-FV-A495-01A-11R-A266-07",
-    "TCGA-K7-A5RG-01A-11R-A28V-07",
-    "TCGA-DD-A3A7-01A-11R-A22L-07",
-    "TCGA-DD-A4NL-01A-11R-A28V-07",
-    "TCGA-DD-A39Y-01A-11R-A213-07",
-    "TCGA-DD-A4NN-01A-11R-A28V-07",
-    "TCGA-BC-A10T-01A-11R-A131-07",
-    "TCGA-DD-A3A6-11A-11R-A22L-07",
-    "TCGA-G3-A25S-01A-11R-A16W-07",
-    "TCGA-CC-5260-01A-01R-A131-07",
-    "TCGA-G3-A5SK-01A-11R-A27V-07",
-    "TCGA-BC-A10T-11A-11R-A131-07",
-    "TCGA-BC-A69H-01A-11R-A311-07",
-    "TCGA-GJ-A6C0-01A-12R-A311-07",
-    "TCGA-DD-A3A9-01A-11R-A266-07",
-    "TCGA-G3-A3CJ-01A-11R-A213-07",
-    "TCGA-DD-A4ND-01A-11R-A266-07",
-    "TCGA-EP-A2KC-01A-11R-A213-07",
-    "TCGA-BC-A10U-01A-11R-A131-07",
-    "TCGA-CC-A5UE-01A-11R-A28V-07",
-    "TCGA-EP-A2KA-01A-11R-A180-07",
-    "TCGA-BC-A216-01A-11R-A155-07",
-    "TCGA-DD-A3A1-01A-11R-A213-07",
-    "TCGA-DD-A119-11A-11R-A131-07",
-    "TCGA-EP-A12J-01A-11R-A131-07",
-    "TCGA-BC-A10Y-01A-11R-A131-07",
-    "TCGA-DD-A4NH-01A-11R-A27V-07",
-    "TCGA-DD-A1EG-01A-11R-A213-07",
-    "TCGA-BC-4073-01B-02R-A131-07",
-    "TCGA-DD-A11B-01A-11R-A131-07",
-    "TCGA-DD-A115-01A-11R-A131-07",
-    "TCGA-DD-A4NB-01A-12R-A266-07",
-    "TCGA-BD-A3ER-01A-11R-A213-07",
-    "TCGA-FV-A2QR-01A-11R-A213-07",
-    "TCGA-DD-A1EB-11A-11R-A131-07",
-    "TCGA-DD-A4NO-01A-11R-A28V-07",
-    "TCGA-FV-A3R3-01A-11R-A22L-07",
-    "TCGA-DD-A4NE-01A-11R-A27V-07",
-    "TCGA-DD-A3A2-11A-11R-A213-07",
-    "TCGA-DD-A39Z-01A-11R-A213-07",
-    "TCGA-DD-A1EE-11A-11R-A131-07",
-    "TCGA-DD-A3A3-01A-11R-A22L-07",
-    "TCGA-DD-A11D-11A-12R-A131-07",
-    "TCGA-G3-A5SL-01A-11R-A27V-07",
-    "TCGA-DD-A119-01A-11R-A131-07",
-    "TCGA-G3-A3CG-01A-11R-A213-07",
-    "TCGA-BD-A3EP-11A-12R-A22L-07",
-    "TCGA-DD-A1EG-11A-11R-A213-07",
-    "TCGA-BW-A5NO-01A-11R-A27V-07",
-    "TCGA-BC-A10Q-11A-11R-A131-07",
-    "TCGA-G3-A5SM-01A-12R-A28V-07",
-    "TCGA-MI-A75C-01A-11R-A32O-07",
-    "TCGA-BC-A110-11A-11R-A131-07",
-    "TCGA-FV-A3I1-11A-11R-A22L-07",
-    "TCGA-DD-A4NK-01A-11R-A28V-07",
-    "TCGA-DD-A1EJ-11A-11R-A155-07",
-    "TCGA-DD-A3A4-11A-11R-A22L-07",
-    "TCGA-FV-A23B-11A-11R-A16W-07",
-    "TCGA-DD-A73G-01A-22R-A32O-07",
-    "TCGA-BC-A110-01A-11R-A131-07",
-    "TCGA-BC-A10X-01A-11R-A131-07",
-    "TCGA-CC-A3MB-01A-11R-A213-07",
-    "TCGA-G3-A5SI-01A-31R-A27V-07",
-    "TCGA-DD-A113-11A-12R-A131-07",
-    "TCGA-G3-A3CI-01A-11R-A213-07",
-    "TCGA-EP-A12J-11A-11R-A131-07",
-    "TCGA-G3-A25U-01A-11R-A16W-07",
-    "TCGA-DD-A3A5-01A-11R-A22L-07",
-    "TCGA-BC-A10S-01A-22R-A131-07",
-    "TCGA-DD-A118-01A-11R-A131-07",
-    "TCGA-EP-A2KB-01A-11R-A180-07",
-    "TCGA-DD-A11A-11A-11R-A131-07",
-    "TCGA-ED-A66Y-01A-11R-A311-07",
-    "TCGA-CC-5263-01A-01R-A131-07"
-  ],
+  "TCGA-DD-A11A-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A11A"],
+  "fq2": ["TCGA-DD-A11A-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11A-01A-11R-A131-07_rna_seq_1.fastq"]},
 
-  "paired_fastqs": {
-    "TCGA-ED-A459-01A-11R-A266-07": [
-    	"TCGA-ED-A459-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-ED-A459-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EB-01A-11R-A131-07": [
-    	"TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EB-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11A-01A-11R-A131-07": [
-    	"TCGA-DD-A11A-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11A-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A12J-11A-11R-A131-07": [
-    	"TCGA-EP-A12J-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-EP-A12J-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NA-01A-11R-A266-07": [
-    	"TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A113-01A-11R-A131-07": [
-    	"TCGA-DD-A113-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A113-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A116-01A-11R-A131-07": [
-    	"TCGA-DD-A116-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A116-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NJ-01A-11R-A27V-07": [
-    	"TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A8-01A-11R-A22L-07": [
-    	"TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A5SJ-01A-11R-A27V-07": [
-    	"TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NI-01A-11R-A27V-07": [
-    	"TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A3M9-01A-11R-A213-07": [
-    	"TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EC-11A-11R-A131-07": [
-    	"TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-RC-A6M4-01A-11R-A32O-07": [
-    	"TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EI-11A-11R-A131-07": [
-    	"TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A114-11A-12R-A131-07": [
-    	"TCGA-DD-A114-11A-12R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A114-11A-12R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10Z-01A-11R-A131-07": [
-    	"TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EI-01A-11R-A131-07": [
-    	"TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11C-11A-11R-A131-07": [
-    	"TCGA-DD-A11C-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11C-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A3KG-01A-11R-A213-07": [
-    	"TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A8-11A-11R-A22L-07": [
-    	"TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-QA-A7B7-01A-11R-A32O-07": [
-    	"TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10Y-11A-11R-A131-07": [
-    	"TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A3I0-01A-11R-A22L-07": [
-    	"TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A5UD-01A-11R-A28V-07": [
-    	"TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10R-11A-11R-A131-07": [
-    	"TCGA-BC-A10R-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10R-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A217-01A-11R-A155-07": [
-    	"TCGA-BC-A217-01A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-BC-A217-01A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A3R2-11A-11R-A22L-07": [
-    	"TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-5264-01A-01R-A131-07": [
-    	"TCGA-CC-5264-01A-01R-A131-07_rna_seq_1.fastq",
-    	"TCGA-CC-5264-01A-01R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-5258-01A-01R-A131-07": [
-    	"TCGA-CC-5258-01A-01R-A131-07_rna_seq_1.fastq",
-    	"TCGA-CC-5258-01A-01R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10Q-01A-11R-A131-07": [
-    	"TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NQ-01A-21R-A28V-07": [
-    	"TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-HP-A5N0-01A-11R-A28V-07": [
-    	"TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-RC-A6M3-01A-11R-A32O-07": [
-    	"TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NS-01A-11R-A311-07": [
-    	"TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10Q-11A-11R-A131-07": [
-    	"TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A1-01A-11R-A213-07": [
-    	"TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-5260-01A-01R-A131-07": [
-    	"TCGA-CC-5260-01A-01R-A131-07_rna_seq_1.fastq",
-    	"TCGA-CC-5260-01A-01R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10W-11A-11R-A131-07": [
-    	"TCGA-BC-A10W-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10W-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-LG-A6GG-01A-11R-A311-07": [
-    	"TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A25U-01A-11R-A16W-07": [
-    	"TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10X-11A-11R-A131-07": [
-    	"TCGA-BC-A10X-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10X-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A73B-01A-12R-A32O-07": [
-    	"TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1ED-01A-11R-A155-07": [
-    	"TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10T-11A-11R-A131-07": [
-    	"TCGA-BC-A10T-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10T-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A3-11A-11R-A22L-07": [
-    	"TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NF-01A-11R-A27V-07": [
-    	"TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ES-A2HT-11A-11R-A180-07": [
-    	"TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_1.fastq",
-    	"TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ED-A5KG-01A-11R-A27V-07": [
-    	"TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A26S-01A-11R-A16W-07": [
-    	"TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A1-11A-11R-A213-07": [
-    	"TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A110-11A-11R-A131-07": [
-    	"TCGA-BC-A110-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A110-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-RC-A6M6-01A-11R-A32O-07": [
-    	"TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-MI-A75I-01A-11R-A32O-07": [
-    	"TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NP-01A-11R-A28V-07": [
-    	"TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NR-01A-11R-A311-07": [
-    	"TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EH-11A-11R-A131-07": [
-    	"TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11D-01A-11R-A131-07": [
-    	"TCGA-DD-A11D-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11D-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A2QQ-01A-11R-A22L-07": [
-    	"TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A3CK-01A-11R-A213-07": [
-    	"TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A3RK-11A-11R-A22L-07": [
-    	"TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A25T-01A-11R-A16W-07": [
-    	"TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A3KF-01A-11R-A213-07": [
-    	"TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BD-A2L6-11A-21R-A213-07": [
-    	"TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_1.fastq",
-    	"TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A2-01A-11R-A213-07": [
-    	"TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ES-A2HS-01A-11R-A180-07": [
-    	"TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_1.fastq",
-    	"TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BW-A5NP-01A-11R-A27V-07": [
-    	"TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-NI-A4U2-01A-11R-A28V-07": [
-    	"TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10U-11A-11R-A131-07": [
-    	"TCGA-BC-A10U-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10U-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39X-01A-11R-A213-07": [
-    	"TCGA-DD-A39X-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39X-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A5UC-01A-11R-A28V-07": [
-    	"TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10Z-11A-11R-A131-07": [
-    	"TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A2KC-01A-11R-A213-07": [
-    	"TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A25Y-01A-11R-A16W-07": [
-    	"TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-MR-A520-01A-11R-A266-07": [
-    	"TCGA-MR-A520-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-MR-A520-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A216-11A-11R-A155-07": [
-    	"TCGA-BC-A216-11A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-BC-A216-11A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A25X-01A-11R-A16W-07": [
-    	"TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A114-01A-11R-A131-07": [
-    	"TCGA-DD-A114-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A114-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ES-A2HT-01A-12R-A180-07": [
-    	"TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_1.fastq",
-    	"TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BW-A5NQ-01A-11R-A27V-07": [
-    	"TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A73A-01A-12R-A32O-07": [
-    	"TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10W-01A-11R-A131-07": [
-    	"TCGA-BC-A10W-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10W-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10R-01A-11R-A131-07": [
-    	"TCGA-BC-A10R-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10R-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A3CH-01A-11R-A22L-07": [
-    	"TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EK-01A-11R-A213-07": [
-    	"TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A110-01A-11R-A131-07": [
-    	"TCGA-BC-A110-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A110-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BD-A2L6-01A-11R-A213-07": [
-    	"TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A3CJ-01A-11R-A213-07": [
-    	"TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EH-01A-11R-A131-07": [
-    	"TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-4072-01B-11R-A155-07": [
-    	"TCGA-BC-4072-01B-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-BC-4072-01B-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EA-01A-11R-A131-07": [
-    	"TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-RC-A6M5-01A-11R-A32O-07": [
-    	"TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BD-A3EP-01A-11R-A22L-07": [
-    	"TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-HP-A5MZ-01A-21R-A27V-07": [
-    	"TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39W-01A-11R-A213-07": [
-    	"TCGA-DD-A39W-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39W-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39W-11A-11R-A213-07": [
-    	"TCGA-DD-A39W-11A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39W-11A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EC-01A-21R-A131-07": [
-    	"TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A112-01A-11R-A131-07": [
-    	"TCGA-BC-A112-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A112-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A116-11A-12R-A26B-07": [
-    	"TCGA-DD-A116-11A-12R-A26B-07_rna_seq_1.fastq",
-    	"TCGA-DD-A116-11A-12R-A26B-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A2QR-11A-11R-A213-07": [
-    	"TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A5-01A-11R-A22L-07": [
-    	"TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39X-11A-11R-A213-07": [
-    	"TCGA-DD-A39X-11A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39X-11A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NH-01A-11R-A27V-07": [
-    	"TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-MI-A75H-01A-11R-A32O-07": [
-    	"TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39V-11A-11R-A213-07": [
-    	"TCGA-DD-A39V-11A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39V-11A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EF-01A-11R-A131-07": [
-    	"TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A4ZP-01A-12R-A266-07": [
-    	"TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_1.fastq",
-    	"TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A73F-01A-11R-A32O-07": [
-    	"TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NV-01A-11R-A311-07": [
-    	"TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A3CH-11A-11R-A22L-07": [
-    	"TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11C-01A-11R-A131-07": [
-    	"TCGA-DD-A11C-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11C-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A3I1-01A-11R-A22L-07": [
-    	"TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-O8-A75V-01A-11R-A32O-07": [
-    	"TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39V-01A-11R-A213-07": [
-    	"TCGA-DD-A39V-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39V-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A3I0-11A-11R-A22L-07": [
-    	"TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EJ-01A-11R-A155-07": [
-    	"TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-5262-01A-01R-A131-07": [
-    	"TCGA-CC-5262-01A-01R-A131-07_rna_seq_1.fastq",
-    	"TCGA-CC-5262-01A-01R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A1HT-01A-11R-A131-07": [
-    	"TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-5261-01A-01R-A131-07": [
-    	"TCGA-CC-5261-01A-01R-A131-07_rna_seq_1.fastq",
-    	"TCGA-CC-5261-01A-01R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A6-01A-11R-A22L-07": [
-    	"TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-MI-A75G-01A-11R-A32O-07": [
-    	"TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A3MB-01A-11R-A213-07": [
-    	"TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NG-01A-11R-A27V-07": [
-    	"TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A23B-01A-11R-A16W-07": [
-    	"TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A4-01A-11R-A22L-07": [
-    	"TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A26S-11A-12R-A16W-07": [
-    	"TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A118-11A-11R-A131-07": [
-    	"TCGA-DD-A118-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A118-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-PD-A5DF-01A-11R-A27V-07": [
-    	"TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ED-A66X-01A-11R-A311-07": [
-    	"TCGA-ED-A66X-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-ED-A66X-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-K7-A6G5-01A-11R-A311-07": [
-    	"TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11B-11A-11R-A131-07": [
-    	"TCGA-DD-A11B-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11B-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-5259-01A-31R-A213-07": [
-    	"TCGA-CC-5259-01A-31R-A213-07_rna_seq_1.fastq",
-    	"TCGA-CC-5259-01A-31R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EE-01A-11R-A131-07": [
-    	"TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A3MA-01A-11R-A213-07": [
-    	"TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A25V-01A-11R-A16W-07": [
-    	"TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A69I-01A-11R-A311-07": [
-    	"TCGA-BC-A69I-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-BC-A69I-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A495-01A-11R-A266-07": [
-    	"TCGA-FV-A495-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-FV-A495-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-K7-A5RG-01A-11R-A28V-07": [
-    	"TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A7-01A-11R-A22L-07": [
-    	"TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NL-01A-11R-A28V-07": [
-    	"TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A3R2-01A-11R-A22L-07": [
-    	"TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NN-01A-11R-A28V-07": [
-    	"TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A25Z-01A-11R-A16W-07": [
-    	"TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11A-11A-11R-A131-07": [
-    	"TCGA-DD-A11A-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11A-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A6-11A-11R-A22L-07": [
-    	"TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A25S-01A-11R-A16W-07": [
-    	"TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A115-01A-11R-A131-07": [
-    	"TCGA-DD-A115-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A115-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ED-A627-01A-12R-A311-07": [
-    	"TCGA-ED-A627-01A-12R-A311-07_rna_seq_1.fastq",
-    	"TCGA-ED-A627-01A-12R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A5SK-01A-11R-A27V-07": [
-    	"TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39Z-11A-21R-A213-07": [
-    	"TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A69H-01A-11R-A311-07": [
-    	"TCGA-BC-A69H-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-BC-A69H-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-GJ-A6C0-01A-12R-A311-07": [
-    	"TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_1.fastq",
-    	"TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A9-01A-11R-A266-07": [
-    	"TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A5-11A-11R-A22L-07": [
-    	"TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A496-01A-11R-A266-07": [
-    	"TCGA-FV-A496-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-FV-A496-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10U-01A-11R-A131-07": [
-    	"TCGA-BC-A10U-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10U-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A5UE-01A-11R-A28V-07": [
-    	"TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A2KA-01A-11R-A180-07": [
-    	"TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_1.fastq",
-    	"TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A216-01A-11R-A155-07": [
-    	"TCGA-BC-A216-01A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-BC-A216-01A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A3JL-01A-11R-A213-07": [
-    	"TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A119-11A-11R-A131-07": [
-    	"TCGA-DD-A119-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A119-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A12J-01A-11R-A131-07": [
-    	"TCGA-EP-A12J-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-EP-A12J-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10Y-01A-11R-A131-07": [
-    	"TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A4ZQ-01A-11R-A266-07": [
-    	"TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39Y-01A-11R-A213-07": [
-    	"TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EG-01A-11R-A213-07": [
-    	"TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-4073-01B-02R-A131-07": [
-    	"TCGA-BC-4073-01B-02R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-4073-01B-02R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11B-01A-11R-A131-07": [
-    	"TCGA-DD-A11B-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11B-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4ND-01A-11R-A266-07": [
-    	"TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NB-01A-12R-A266-07": [
-    	"TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BD-A3ER-01A-11R-A213-07": [
-    	"TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A2QR-01A-11R-A213-07": [
-    	"TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EB-11A-11R-A131-07": [
-    	"TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NO-01A-11R-A28V-07": [
-    	"TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A3R3-01A-11R-A22L-07": [
-    	"TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NE-01A-11R-A27V-07": [
-    	"TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A2-11A-11R-A213-07": [
-    	"TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A39Z-01A-11R-A213-07": [
-    	"TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EE-11A-11R-A131-07": [
-    	"TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A3-01A-11R-A22L-07": [
-    	"TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A118-01A-11R-A131-07": [
-    	"TCGA-DD-A118-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A118-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A5SL-01A-11R-A27V-07": [
-    	"TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A119-01A-11R-A131-07": [
-    	"TCGA-DD-A119-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A119-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A3CG-01A-11R-A213-07": [
-    	"TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BD-A3EP-11A-12R-A22L-07": [
-    	"TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EG-11A-11R-A213-07": [
-    	"TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BW-A5NO-01A-11R-A27V-07": [
-    	"TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-A3MC-01A-11R-A22L-07": [
-    	"TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A5SM-01A-12R-A28V-07": [
-    	"TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-MI-A75C-01A-11R-A32O-07": [
-    	"TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A3RK-01A-11R-A22L-07": [
-    	"TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A3I1-11A-11R-A22L-07": [
-    	"TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A4NK-01A-11R-A28V-07": [
-    	"TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EJ-11A-11R-A155-07": [
-    	"TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A3A4-11A-11R-A22L-07": [
-    	"TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_1.fastq",
-    	"TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_2.fastq"
-    ],
-    "TCGA-FV-A23B-11A-11R-A16W-07": [
-    	"TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_1.fastq",
-    	"TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A73G-01A-22R-A32O-07": [
-    	"TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EL-11A-11R-A155-07": [
-    	"TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10X-01A-11R-A131-07": [
-    	"TCGA-BC-A10X-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10X-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ED-A4XI-01A-11R-A266-07": [
-    	"TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_1.fastq",
-    	"TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A113-11A-12R-A131-07": [
-    	"TCGA-DD-A113-11A-12R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A113-11A-12R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A3CI-01A-11R-A213-07": [
-    	"TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_1.fastq",
-    	"TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A5W4-01A-11R-A28V-07": [
-    	"TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_1.fastq",
-    	"TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-G3-A5SI-01A-31R-A27V-07": [
-    	"TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_1.fastq",
-    	"TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A1EL-01A-11R-A155-07": [
-    	"TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_1.fastq",
-    	"TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10S-01A-22R-A131-07": [
-    	"TCGA-BC-A10S-01A-22R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10S-01A-22R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-DD-A11D-11A-12R-A131-07": [
-    	"TCGA-DD-A11D-11A-12R-A131-07_rna_seq_1.fastq",
-    	"TCGA-DD-A11D-11A-12R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-EP-A2KB-01A-11R-A180-07": [
-    	"TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_1.fastq",
-    	"TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_2.fastq"
-    ],
-    "TCGA-T1-A6J8-01A-11R-A32O-07": [
-    	"TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_1.fastq",
-    	"TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_2.fastq"
-    ],
-    "TCGA-ED-A66Y-01A-11R-A311-07": [
-    	"TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_1.fastq",
-    	"TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_2.fastq"
-    ],
-    "TCGA-BC-A10T-01A-11R-A131-07": [
-    	"TCGA-BC-A10T-01A-11R-A131-07_rna_seq_1.fastq",
-    	"TCGA-BC-A10T-01A-11R-A131-07_rna_seq_2.fastq"
-    ],
-    "TCGA-CC-5263-01A-01R-A131-07": [
-    	"TCGA-CC-5263-01A-01R-A131-07_rna_seq_1.fastq",
-      "TCGA-CC-5263-01A-01R-A131-07_rna_seq_2.fastq"
-    ]
-},
+  "TCGA-DD-A4NA-01A-11R-A266-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NA"],
+  "fq2": ["TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NA-01A-11R-A266-07_rna_seq_1.fastq"]},
 
-	"sample1":{
-		"fq1": ["1_1.fastq"],
-		"fq2": ["1_2.fastq"],
-		"patient_id": ["xyz"],
-		"sex": ["Female"],
-	},
-  "sample2":{
-		"fq1": ["2_1.fastq"],
-		"fq2": ["2_2.fastq"],
-		"patient_id": ["xyz"],
-		"sex": ["Male"],
-	},
+  "TCGA-DD-A113-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A113"],
+  "fq2": ["TCGA-DD-A113-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A113-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A116-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A116"],
+  "fq2": ["TCGA-DD-A116-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A116-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NJ-01A-11R-A27V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NJ"],
+  "fq2": ["TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NJ-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A8-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A8"],
+  "fq2": ["TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A8-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39X-11A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A39X"],
+  "fq2": ["TCGA-DD-A39X-11A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39X-11A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NI-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NI"],
+  "fq2": ["TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NI-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A3M9-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A3M9"],
+  "fq2": ["TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A3M9-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EC-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EC"],
+  "fq2": ["TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EC-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-RC-A6M4-01A-11R-A32O-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-RC-A6M4"],
+  "fq2": ["TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-RC-A6M4-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EI-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EI"],
+  "fq2": ["TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EI-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A5SJ-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A5SJ"],
+  "fq2": ["TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A5SJ-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A114-11A-12R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A114"],
+  "fq2": ["TCGA-DD-A114-11A-12R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A114-11A-12R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-MR-A520-01A-11R-A266-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-MR-A520"],
+  "fq2": ["TCGA-MR-A520-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-MR-A520-01A-11R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10Z-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10Z"],
+  "fq2": ["TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10Z-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EI-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EI"],
+  "fq2": ["TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EI-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A11C-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A11C"],
+  "fq2": ["TCGA-DD-A11C-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11C-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A3KG-01A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A3KG"],
+  "fq2": ["TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A3KG-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A8-11A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A8"],
+  "fq2": ["TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A8-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-QA-A7B7-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-QA-A7B7"],
+  "fq2": ["TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-QA-A7B7-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10Y-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10Y"],
+  "fq2": ["TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10Y-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A3I0-01A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A3I0"],
+  "fq2": ["TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A3I0-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A5UD-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A5UD"],
+  "fq2": ["TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A5UD-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10R-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10R"],
+  "fq2": ["TCGA-BC-A10R-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10R-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A217-01A-11R-A155-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A217"],
+  "fq2": ["TCGA-BC-A217-01A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A217-01A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A3R2-11A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-FV-A3R2"],
+  "fq2": ["TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A3R2-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-5264-01A-01R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-5264"],
+  "fq2": ["TCGA-CC-5264-01A-01R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-5264-01A-01R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-5258-01A-01R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-5258"],
+  "fq2": ["TCGA-CC-5258-01A-01R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-5258-01A-01R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NG-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NG"],
+  "fq2": ["TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NG-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10Q-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10Q"],
+  "fq2": ["TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10Q-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-MI-A75H-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-MI-A75H"],
+  "fq2": ["TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-MI-A75H-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-HP-A5N0-01A-11R-A28V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-HP-A5N0"],
+  "fq2": ["TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-HP-A5N0-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-HP-A5MZ-01A-21R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-HP-A5MZ"],
+  "fq2": ["TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-HP-A5MZ-01A-21R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-RC-A6M3-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-RC-A6M3"],
+  "fq2": ["TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-RC-A6M3-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NS-01A-11R-A311-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NS"],
+  "fq2": ["TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NS-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A3MC-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A3MC"],
+  "fq2": ["TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A3MC-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-ED-A627-01A-12R-A311-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-ED-A627"],
+  "fq2": ["TCGA-ED-A627-01A-12R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ED-A627-01A-12R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10W-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10W"],
+  "fq2": ["TCGA-BC-A10W-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10W-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-LG-A6GG-01A-11R-A311-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-LG-A6GG"],
+  "fq2": ["TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-LG-A6GG-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10X-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10X"],
+  "fq2": ["TCGA-BC-A10X-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10X-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A73B-01A-12R-A32O-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A73B"],
+  "fq2": ["TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A73B-01A-12R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1ED-01A-11R-A155-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1ED"],
+  "fq2": ["TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1ED-01A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A25Z-01A-11R-A16W-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A25Z"],
+  "fq2": ["TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A25Z-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A3-11A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A3"],
+  "fq2": ["TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A3-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NF-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NF"],
+  "fq2": ["TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NF-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-ES-A2HT-11A-11R-A180-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-ES-A2HT"],
+  "fq2": ["TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ES-A2HT-11A-11R-A180-07_rna_seq_1.fastq"]},
+
+  "TCGA-ED-A5KG-01A-11R-A27V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-ED-A5KG"],
+  "fq2": ["TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ED-A5KG-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A26S-01A-11R-A16W-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A26S"],
+  "fq2": ["TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A26S-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A1-11A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A1"],
+  "fq2": ["TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A1-11A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A3RK-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A3RK"],
+  "fq2": ["TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A3RK-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-T1-A6J8-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-T1-A6J8"],
+  "fq2": ["TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-T1-A6J8-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A73F-01A-11R-A32O-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A73F"],
+  "fq2": ["TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A73F-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-RC-A6M6-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-RC-A6M6"],
+  "fq2": ["TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-RC-A6M6-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-MI-A75I-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-MI-A75I"],
+  "fq2": ["TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-MI-A75I-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NP-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NP"],
+  "fq2": ["TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NP-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NR-01A-11R-A311-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NR"],
+  "fq2": ["TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NR-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EH-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EH"],
+  "fq2": ["TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EH-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A11D-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A11D"],
+  "fq2": ["TCGA-DD-A11D-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11D-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A2QQ-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-FV-A2QQ"],
+  "fq2": ["TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A2QQ-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A3CK-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A3CK"],
+  "fq2": ["TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A3CK-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A3RK-11A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A3RK"],
+  "fq2": ["TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A3RK-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A25T-01A-11R-A16W-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-G3-A25T"],
+  "fq2": ["TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A25T-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A3KF-01A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A3KF"],
+  "fq2": ["TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A3KF-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-BD-A2L6-11A-21R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BD-A2L6"],
+  "fq2": ["TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BD-A2L6-11A-21R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A2-01A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A2"],
+  "fq2": ["TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A2-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-ES-A2HS-01A-11R-A180-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-ES-A2HS"],
+  "fq2": ["TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ES-A2HS-01A-11R-A180-07_rna_seq_1.fastq"]},
+
+  "TCGA-BW-A5NP-01A-11R-A27V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BW-A5NP"],
+  "fq2": ["TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BW-A5NP-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-NI-A4U2-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-NI-A4U2"],
+  "fq2": ["TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-NI-A4U2-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10U-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10U"],
+  "fq2": ["TCGA-BC-A10U-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10U-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A5UC-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A5UC"],
+  "fq2": ["TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A5UC-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10Z-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10Z"],
+  "fq2": ["TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10Z-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A496-01A-11R-A266-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A496"],
+  "fq2": ["TCGA-FV-A496-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A496-01A-11R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A25Y-01A-11R-A16W-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-G3-A25Y"],
+  "fq2": ["TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A25Y-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EL-01A-11R-A155-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EL"],
+  "fq2": ["TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EL-01A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A216-11A-11R-A155-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A216"],
+  "fq2": ["TCGA-BC-A216-11A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A216-11A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-O8-A75V-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-O8-A75V"],
+  "fq2": ["TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-O8-A75V-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A114-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A114"],
+  "fq2": ["TCGA-DD-A114-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A114-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-ES-A2HT-01A-12R-A180-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-ES-A2HT"],
+  "fq2": ["TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ES-A2HT-01A-12R-A180-07_rna_seq_1.fastq"]},
+
+  "TCGA-BW-A5NQ-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BW-A5NQ"],
+  "fq2": ["TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BW-A5NQ-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A73A-01A-12R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A73A"],
+  "fq2": ["TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A73A-01A-12R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10W-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10W"],
+  "fq2": ["TCGA-BC-A10W-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10W-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10R-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10R"],
+  "fq2": ["TCGA-BC-A10R-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10R-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A3CH-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A3CH"],
+  "fq2": ["TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A3CH-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A3JL-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A3JL"],
+  "fq2": ["TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A3JL-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EK-01A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EK"],
+  "fq2": ["TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EK-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EL-11A-11R-A155-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EL"],
+  "fq2": ["TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EL-11A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-BD-A2L6-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BD-A2L6"],
+  "fq2": ["TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BD-A2L6-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EH-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EH"],
+  "fq2": ["TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EH-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EJ-01A-11R-A155-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EJ"],
+  "fq2": ["TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EJ-01A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EA-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EA"],
+  "fq2": ["TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EA-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-RC-A6M5-01A-11R-A32O-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-RC-A6M5"],
+  "fq2": ["TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-RC-A6M5-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-BD-A3EP-01A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BD-A3EP"],
+  "fq2": ["TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BD-A3EP-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A5-11A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A5"],
+  "fq2": ["TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A5-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39W-01A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A39W"],
+  "fq2": ["TCGA-DD-A39W-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39W-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39W-11A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A39W"],
+  "fq2": ["TCGA-DD-A39W-11A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39W-11A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EC-01A-21R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EC"],
+  "fq2": ["TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EC-01A-21R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A112-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A112"],
+  "fq2": ["TCGA-BC-A112-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A112-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A3R2-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-FV-A3R2"],
+  "fq2": ["TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A3R2-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A116-11A-12R-A26B-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A116"],
+  "fq2": ["TCGA-DD-A116-11A-12R-A26B-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A116-11A-12R-A26B-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A2QR-11A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-FV-A2QR"],
+  "fq2": ["TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A2QR-11A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A5W4-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A5W4"],
+  "fq2": ["TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A5W4-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A4ZQ-01A-11R-A266-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-FV-A4ZQ"],
+  "fq2": ["TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A4ZQ-01A-11R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NQ-01A-21R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NQ"],
+  "fq2": ["TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NQ-01A-21R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39V-11A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A39V"],
+  "fq2": ["TCGA-DD-A39V-11A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39V-11A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EF-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EF"],
+  "fq2": ["TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EF-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A4ZP-01A-12R-A266-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-FV-A4ZP"],
+  "fq2": ["TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A4ZP-01A-12R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39Z-11A-21R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A39Z"],
+  "fq2": ["TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39Z-11A-21R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NV-01A-11R-A311-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NV"],
+  "fq2": ["TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NV-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A3CH-11A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A3CH"],
+  "fq2": ["TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A3CH-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A11C-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A11C"],
+  "fq2": ["TCGA-DD-A11C-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11C-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A3I1-01A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A3I1"],
+  "fq2": ["TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A3I1-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A25X-01A-11R-A16W-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A25X"],
+  "fq2": ["TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A25X-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39V-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A39V"],
+  "fq2": ["TCGA-DD-A39V-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39V-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A3I0-11A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A3I0"],
+  "fq2": ["TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A3I0-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-4072-01B-11R-A155-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-4072"],
+  "fq2": ["TCGA-BC-4072-01B-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-4072-01B-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-5262-01A-01R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-5262"],
+  "fq2": ["TCGA-CC-5262-01A-01R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-5262-01A-01R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A1HT-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A1HT"],
+  "fq2": ["TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A1HT-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-5261-01A-01R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-5261"],
+  "fq2": ["TCGA-CC-5261-01A-01R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-5261-01A-01R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A6-01A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A6"],
+  "fq2": ["TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A6-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-MI-A75G-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-MI-A75G"],
+  "fq2": ["TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-MI-A75G-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-ED-A4XI-01A-11R-A266-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-ED-A4XI"],
+  "fq2": ["TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ED-A4XI-01A-11R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A11B-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A11B"],
+  "fq2": ["TCGA-DD-A11B-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11B-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A23B-01A-11R-A16W-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A23B"],
+  "fq2": ["TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A23B-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A4-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A4"],
+  "fq2": ["TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A4-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A26S-11A-12R-A16W-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A26S"],
+  "fq2": ["TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A26S-11A-12R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A118-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A118"],
+  "fq2": ["TCGA-DD-A118-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A118-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-PD-A5DF-01A-11R-A27V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-PD-A5DF"],
+  "fq2": ["TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-PD-A5DF-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-ED-A66X-01A-11R-A311-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-ED-A66X"],
+  "fq2": ["TCGA-ED-A66X-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ED-A66X-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-K7-A6G5-01A-11R-A311-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-K7-A6G5"],
+  "fq2": ["TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-K7-A6G5-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39X-01A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A39X"],
+  "fq2": ["TCGA-DD-A39X-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39X-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-5259-01A-31R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-CC-5259"],
+  "fq2": ["TCGA-CC-5259-01A-31R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-5259-01A-31R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EE-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EE"],
+  "fq2": ["TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EE-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A3MA-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A3MA"],
+  "fq2": ["TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A3MA-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A25V-01A-11R-A16W-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A25V"],
+  "fq2": ["TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A25V-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A69I-01A-11R-A311-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A69I"],
+  "fq2": ["TCGA-BC-A69I-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A69I-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A495-01A-11R-A266-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A495"],
+  "fq2": ["TCGA-FV-A495-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A495-01A-11R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-K7-A5RG-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-K7-A5RG"],
+  "fq2": ["TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-K7-A5RG-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A7-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A7"],
+  "fq2": ["TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A7-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NL-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NL"],
+  "fq2": ["TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NL-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39Y-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A39Y"],
+  "fq2": ["TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39Y-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NN-01A-11R-A28V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NN"],
+  "fq2": ["TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NN-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10T-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10T"],
+  "fq2": ["TCGA-BC-A10T-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10T-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A6-11A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A6"],
+  "fq2": ["TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A6-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A25S-01A-11R-A16W-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A25S"],
+  "fq2": ["TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A25S-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-5260-01A-01R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-CC-5260"],
+  "fq2": ["TCGA-CC-5260-01A-01R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-5260-01A-01R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A5SK-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A5SK"],
+  "fq2": ["TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A5SK-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10T-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10T"],
+  "fq2": ["TCGA-BC-A10T-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10T-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A69H-01A-11R-A311-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A69H"],
+  "fq2": ["TCGA-BC-A69H-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A69H-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-GJ-A6C0-01A-12R-A311-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-GJ-A6C0"],
+  "fq2": ["TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-GJ-A6C0-01A-12R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A9-01A-11R-A266-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A9"],
+  "fq2": ["TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A9-01A-11R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A3CJ-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A3CJ"],
+  "fq2": ["TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A3CJ-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4ND-01A-11R-A266-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4ND"],
+  "fq2": ["TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4ND-01A-11R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A2KC-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A2KC"],
+  "fq2": ["TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A2KC-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10U-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10U"],
+  "fq2": ["TCGA-BC-A10U-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10U-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A5UE-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A5UE"],
+  "fq2": ["TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A5UE-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A2KA-01A-11R-A180-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-EP-A2KA"],
+  "fq2": ["TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A2KA-01A-11R-A180-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A216-01A-11R-A155-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A216"],
+  "fq2": ["TCGA-BC-A216-01A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A216-01A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A1-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A1"],
+  "fq2": ["TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A1-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A119-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A119"],
+  "fq2": ["TCGA-DD-A119-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A119-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A12J-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A12J"],
+  "fq2": ["TCGA-EP-A12J-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A12J-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10Y-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10Y"],
+  "fq2": ["TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10Y-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NH-01A-11R-A27V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NH"],
+  "fq2": ["TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NH-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EG-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EG"],
+  "fq2": ["TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EG-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-4073-01B-02R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-4073"],
+  "fq2": ["TCGA-BC-4073-01B-02R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-4073-01B-02R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A11B-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A11B"],
+  "fq2": ["TCGA-DD-A11B-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11B-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A115-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A115"],
+  "fq2": ["TCGA-DD-A115-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A115-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NB-01A-12R-A266-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NB"],
+  "fq2": ["TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NB-01A-12R-A266-07_rna_seq_1.fastq"]},
+
+  "TCGA-BD-A3ER-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BD-A3ER"],
+  "fq2": ["TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BD-A3ER-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A2QR-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-FV-A2QR"],
+  "fq2": ["TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A2QR-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EB-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EB"],
+  "fq2": ["TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EB-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NO-01A-11R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NO"],
+  "fq2": ["TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NO-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A3R3-01A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A3R3"],
+  "fq2": ["TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A3R3-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NE-01A-11R-A27V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NE"],
+  "fq2": ["TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NE-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A2-11A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A2"],
+  "fq2": ["TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A2-11A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A39Z-01A-11R-A213-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A39Z"],
+  "fq2": ["TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A39Z-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EE-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EE"],
+  "fq2": ["TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EE-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A3-01A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A3"],
+  "fq2": ["TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A3-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A11D-11A-12R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A11D"],
+  "fq2": ["TCGA-DD-A11D-11A-12R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11D-11A-12R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A5SL-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A5SL"],
+  "fq2": ["TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A5SL-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A119-01A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A119"],
+  "fq2": ["TCGA-DD-A119-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A119-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A3CG-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A3CG"],
+  "fq2": ["TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A3CG-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-BD-A3EP-11A-12R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BD-A3EP"],
+  "fq2": ["TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BD-A3EP-11A-12R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EG-11A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EG"],
+  "fq2": ["TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EG-11A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-BW-A5NO-01A-11R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BW-A5NO"],
+  "fq2": ["TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BW-A5NO-01A-11R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10Q-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10Q"],
+  "fq2": ["TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10Q-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A5SM-01A-12R-A28V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A5SM"],
+  "fq2": ["TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A5SM-01A-12R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-MI-A75C-01A-11R-A32O-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-MI-A75C"],
+  "fq2": ["TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-MI-A75C-01A-11R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A110-11A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A110"],
+  "fq2": ["TCGA-BC-A110-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A110-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A3I1-11A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A3I1"],
+  "fq2": ["TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A3I1-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A4NK-01A-11R-A28V-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A4NK"],
+  "fq2": ["TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A4NK-01A-11R-A28V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A1EJ-11A-11R-A155-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A1EJ"],
+  "fq2": ["TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A1EJ-11A-11R-A155-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A4-11A-11R-A22L-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A4"],
+  "fq2": ["TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A4-11A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-FV-A23B-11A-11R-A16W-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-FV-A23B"],
+  "fq2": ["TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-FV-A23B-11A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A73G-01A-22R-A32O-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A73G"],
+  "fq2": ["TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A73G-01A-22R-A32O-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A110-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A110"],
+  "fq2": ["TCGA-BC-A110-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A110-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10X-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-BC-A10X"],
+  "fq2": ["TCGA-BC-A10X-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10X-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-A3MB-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-A3MB"],
+  "fq2": ["TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-A3MB-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A5SI-01A-31R-A27V-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A5SI"],
+  "fq2": ["TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A5SI-01A-31R-A27V-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A113-11A-12R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A113"],
+  "fq2": ["TCGA-DD-A113-11A-12R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A113-11A-12R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A3CI-01A-11R-A213-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-G3-A3CI"],
+  "fq2": ["TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A3CI-01A-11R-A213-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A12J-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-EP-A12J"],
+  "fq2": ["TCGA-EP-A12J-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A12J-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-G3-A25U-01A-11R-A16W-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-G3-A25U"],
+  "fq2": ["TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-G3-A25U-01A-11R-A16W-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A3A5-01A-11R-A22L-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A3A5"],
+  "fq2": ["TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A3A5-01A-11R-A22L-07_rna_seq_1.fastq"]},
+
+  "TCGA-BC-A10S-01A-22R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-BC-A10S"],
+  "fq2": ["TCGA-BC-A10S-01A-22R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-BC-A10S-01A-22R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A118-01A-11R-A131-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-DD-A118"],
+  "fq2": ["TCGA-DD-A118-01A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A118-01A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-EP-A2KB-01A-11R-A180-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-EP-A2KB"],
+  "fq2": ["TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-EP-A2KB-01A-11R-A180-07_rna_seq_1.fastq"]},
+
+  "TCGA-DD-A11A-11A-11R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["NORMAL"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-DD-A11A"],
+  "fq2": ["TCGA-DD-A11A-11A-11R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-DD-A11A-11A-11R-A131-07_rna_seq_1.fastq"]},
+
+  "TCGA-ED-A66Y-01A-11R-A311-07":
+  {"gender": ["FEMALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["1"],
+  "bcr_patient_barcode": ["TCGA-ED-A66Y"],
+  "fq2": ["TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-ED-A66Y-01A-11R-A311-07_rna_seq_1.fastq"]},
+
+  "TCGA-CC-5263-01A-01R-A131-07":
+  {"gender": ["MALE"],
+  "sample_type": ["TUMOR"],
+  "gender_code": ["0"],
+  "bcr_patient_barcode": ["TCGA-CC-5263"],
+  "fq2": ["TCGA-CC-5263-01A-01R-A131-07_rna_seq_2.fastq"],
+  "fq1": ["TCGA-CC-5263-01A-01R-A131-07_rna_seq_1.fastq"]}
+
 
 }
