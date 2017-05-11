@@ -1,0 +1,70 @@
+import os
+
+configfile: "eqtl.config.json"
+
+# Tools
+STAR = "STAR"
+SAMTOOLS = "samtools"
+HTSEQ = ""
+
+# Reference genome files
+REF = config["GRCh38_ref_path"]
+REF_NAME = config["GRCh38_ref_prefix"]
+GTF = config["gtf_path"]
+STAR_INDEX = config["star_index_dir"]
+
+# Directories
+FQ_DIR = config["tcga_lihc_rnaseq_fastq_dir"] # path to directory with fq files
+AL_DIR = config["tcga_lihc_rnaseq_alignment_dir"]
+
+# Getting unique fastq file and sample names
+WC = glob_wildcards(os.path.join(FQ_DIR, "{sample}_{pair}.fastq"))
+SAMPLES = set(WC.sample) # unique sample names
+PAIR1, PAIR2 = set(WC.pair) # set of paired end specifiers
+
+#rule all:
+     #input:
+         #expand("{S}.bam", S=SAMPLES)
+
+rule star_index:
+	input:
+        ref=REF,
+        star_index=star_index
+	output:
+	params:
+        threads=24
+	shell:
+		"""
+	    "{STAR} --runThreadN {params.threads} --runMode genomeGenerate "
+        "--genomeDir {star_index} --genomeFastaFiles {input.ref} --sjdbGTFfile {gtf}; "
+		"""
+
+rule map:
+	input:
+		R1="{FQ_DIR}/{wildcards.sample}_{pair}.fastq".format(pair=PAIR1),
+	    R2="{FQ_DIR}/{wildcards.sample}_{pair}.fastq".format(pair=PAIR2),
+		star_index=star_index,
+		gtf=GTF,
+		name_prefix:"{wildcards.sample}_"
+	output: "{AL_DIR}/{wildcards.sample}_Aligned.sortedByCoord.out.bam"
+	params:
+		threads=24
+	message: "Mapping reads to {REF_NAME} with STAR. Threads: {params.threads}"
+	shell:
+		"""
+		{STAR} --runThreadN {params.threads} --runMode alignReads
+		--genomeDir {input.star_index} --outFileNamePrefix {input.name_prefix}
+		--readFilesIn {input.R1} {input.R2} --outSAMtype BAM SortedByCoordinate
+		--sjdbGTFfile {input.gtf};
+		"""
+
+rule index_bam:
+     input:
+         BAM="{AL_DIR}/{wildcards.sample}_Aligned.sortedByCoord.out.bam"
+     output: "{AL_DIR}/{wildcards.sample}_Aligned.sortedByCoord.out.bam.bai"
+     message: "Indexing BAM with samtools"
+	 params:
+     shell:
+		"""
+        {SAMTOOLS} index {input.BAM}
+        """
