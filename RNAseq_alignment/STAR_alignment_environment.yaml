@@ -1,0 +1,16 @@
+name: STAR_alignment
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.5.1
+  - samtools=1.4
+  - snakemake=3.11.0
+  - pyyaml=3.11
+  - star=2.5.2
+  - !!python/unicode
+    'samtools=1.4=0'
+  - python=3.5.3
+  - snakemake=3.11.0
+  - pyyaml=3.11

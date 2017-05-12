@@ -1,6 +1,6 @@
 import os
 
-configfile: "eqtl.config.json"
+configfile: "lihc_rnaseq.config.json"
 
 # Tools
 STAR = "STAR"
@@ -18,35 +18,40 @@ FQ_DIR = config["tcga_lihc_rnaseq_fastq_dir"] # path to directory with fq files
 AL_DIR = config["tcga_lihc_rnaseq_alignment_dir"]
 
 # Getting unique fastq file and sample names
-WC = glob_wildcards(os.path.join(FQ_DIR, "{sample}_{pair}.fastq"))
-SAMPLES = set(WC.sample) # unique sample names
-PAIR1, PAIR2 = set(WC.pair) # set of paired end specifiers
+samples = glob_wildcards(os.path.join(FQ_DIR, "{sample}_rna_seq_1.fastq"))
+SAMPLES = set(samples.sample) # unique sample names
+print (SAMPLES)
 
-#rule all:
-     #input:
-         #expand("{S}.bam", S=SAMPLES)
-
-rule star_index:
+rule all:
 	input:
-        ref=REF,
-        star_index=star_index
+		expand("{FQ_DIR}/{sample}_rna_seq_1.fastq", FQ_DIR=FQ_DIR, sample=SAMPLES),
+		expand("{FQ_DIR}/{sample}_rna_seq_2.fastq", FQ_DIR=FQ_DIR, sample=SAMPLES),
+		expand("{AL_DIR}/{sample}_Aligned.sortedByCoord.out.bam", AL_DIR=AL_DIR, sample=SAMPLES)
 	output:
-	params:
-        threads=24
-	shell:
-		"""
-	    "{STAR} --runThreadN {params.threads} --runMode genomeGenerate "
-        "--genomeDir {star_index} --genomeFastaFiles {input.ref} --sjdbGTFfile {gtf}; "
-		"""
+		expand("{AL_DIR}/{sample}_Aligned.sortedByCoord.out.bam", AL_DIR=AL_DIR, sample=SAMPLES),
+		expand("{AL_DIR}/{sample}_Aligned.sortedByCoord.out.bam.bai", AL_DIR=AL_DIR, sample=SAMPLES)
 
-rule map:
+#rule star_index:
+#	input:
+#		ref=REF,
+#		star_index=star_index
+#	output:
+#	params:
+#		threads=24
+#	shell:
+#		"""
+#		"{STAR} --runThreadN {params.threads} --runMode genomeGenerate "
+#		"--genomeDir {star_index} --genomeFastaFiles {input.ref} --sjdbGTFfile {gtf}; "
+#		"""
+
+rule align_reads:
 	input:
-		R1="{FQ_DIR}/{wildcards.sample}_{pair}.fastq".format(pair=PAIR1),
-	    R2="{FQ_DIR}/{wildcards.sample}_{pair}.fastq".format(pair=PAIR2),
-		star_index=star_index,
+		R1="{FQ_DIR}/{sample}_rna_seq_1.fastq",
+		R2="{FQ_DIR}/{sample}_rna_seq_2.fastq",
+		star_index=STAR_INDEX,
 		gtf=GTF,
-		name_prefix:"{wildcards.sample}_"
-	output: "{AL_DIR}/{wildcards.sample}_Aligned.sortedByCoord.out.bam"
+		name_prefix="{sample}_"
+	output: "{AL_DIR}/{sample}_Aligned.sortedByCoord.out.bam"
 	params:
 		threads=24
 	message: "Mapping reads to {REF_NAME} with STAR. Threads: {params.threads}"
@@ -59,12 +64,12 @@ rule map:
 		"""
 
 rule index_bam:
-     input:
-         BAM="{AL_DIR}/{wildcards.sample}_Aligned.sortedByCoord.out.bam"
-     output: "{AL_DIR}/{wildcards.sample}_Aligned.sortedByCoord.out.bam.bai"
-     message: "Indexing BAM with samtools"
-	 params:
-     shell:
+	input:
+		BAM="{AL_DIR}/{sample}_Aligned.sortedByCoord.out.bam"
+	output: "{AL_DIR}/{sample}_Aligned.sortedByCoord.out.bam.bai"
+	message: "Indexing BAM with samtools"
+	params:
+	shell:
 		"""
-        {SAMTOOLS} index {input.BAM}
-        """
+		{SAMTOOLS} index {input.BAM}
+		"""
