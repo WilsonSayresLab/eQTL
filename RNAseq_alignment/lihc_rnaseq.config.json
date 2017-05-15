@@ -5,7 +5,7 @@
   "GRCh38_ref_path": "/mnt/storage/SAYRES/REFERENCE_GENOMES/UCSC_hg38/hg38.fa",
   "GRCh38_ref_prefix": "hg38",
   "gtf_path": "/mnt/storage/SAYRES/REFERENCE_GENOMES/UCSC_hg38/hg38.gtf",
-  "star_index_dir": "/mnt/storage/SAYRES/REFERENCE_GENOMES/UCSC_hg38/STAR_index/",
+  "star_index_dir": "/scratch/hnatr/hg38_STAR_index/",
   "tcga_lihc_rnaseq_fastq_dir": "/mnt/storage/CANCER_DOWNLOADS/LIHCFILES/data/rna/sequences_data",
   "tcga_lihc_rnaseq_alignment_dir": "/mnt/storage/CANCER_DOWNLOADS/LIHCFILES/RNAseq_realignment",
 
