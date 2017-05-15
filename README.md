@@ -1,11 +1,14 @@
 # eQTL
 
-This repository contains the code used in the eQTL pipeline:
+This repository contains the code used in the eQTL project:
 
-Alignment module
+Snakemake workflows:
+  - Alignment
+    - RNA-seq alignment with STAR
+    - RNA-seq quantification with HTSeq
+    - DNA-seq alignment with bowtie2
+  - Variant calling and annotation
+  - eQTL detection
+  - Downstream analyses
 
-Variant calling and annotation module
-
-eQTL detection module
-
-Downstream analyses
+Scripts for parsing sample information
