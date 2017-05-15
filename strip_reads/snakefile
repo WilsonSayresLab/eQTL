@@ -1,0 +1,30 @@
+
+configfile: "tcga_lihc.config.json"
+
+#Directories
+BAM_DIR=config["tcga_lihc_wgs_bam_dir"]
+FQ_DIR=config["tcga_lihc_wgs_stripped_fq_dir"]
+
+#Tools
+XYALIGN="/home/hnatri/XYalign-noY_support/xyalign/xyalign.py"
+
+rule all:
+	input:
+		expand("{BAM_DIR}{sample}_wgs_Illumina.bam", BAM_DIR=BAM_DIR, sample=config["tcga_lihc_wgs_samples"]),
+
+rule strip_reads:
+    input:
+        BAM="{BAM_DIR}{sample}.bam"
+    output:
+    params:
+        cpus:"4",
+        xmx:"4g",
+        compression:"3"
+    message: "Stripping reads from {BAM_DIR}{sample}_wgs_Illumina.bam"
+    shell:
+        """
+        python {XYALIGN} --STRIP_READS --ref null --bam {input.bam}
+        --cpus {params.cpus} --xmx {params.xmx} --sample_id {sample}
+        --output_dir {FQ_DIR} --chromosomes ALL
+        --fastq-compression {params.compression}
+        """
