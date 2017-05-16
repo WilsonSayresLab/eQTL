@@ -17,9 +17,9 @@ rule strip_reads:
         BAM="{BAM_DIR}{sample}.bam"
     output:
     params:
-        cpus:"4",
-        xmx:"4g",
-        compression:"3"
+        cpus="4",
+        xmx="4g",
+        compression="3"
     message: "Stripping reads from {BAM_DIR}{sample}_wgs_Illumina.bam"
     shell:
         """

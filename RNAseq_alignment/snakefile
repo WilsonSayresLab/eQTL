@@ -8,33 +8,38 @@ SAMTOOLS = "samtools"
 HTSEQ = ""
 
 # Reference genome files
-REF = config["GRCh38_ref_path"]
-REF_NAME = config["GRCh38_ref_prefix"]
-GTF = config["gtf_path"]
-STAR_INDEX = config["star_index_dir"]
+REF = config["xx_GRCh38_ref_path"]
+REF_NAME = config["xx_GRCh38_ref_prefix"]
+GTF = config["xx_gtf_path"]
+STAR_INDEX = config["xx_star_index_dir"]
 
 # Directories
 FQ_DIR = config["tcga_lihc_rnaseq_fastq_dir"] # path to directory with fq files
-AL_DIR = config["tcga_lihc_rnaseq_alignment_dir"]
+AL_DIR = config["tcga_lihc_rnaseq_realignment_dir"]
 
 # Getting unique fastq file and sample names
 #samples = glob_wildcards(os.path.join(FQ_DIR, "{sample}_rna_seq_1.fastq"))
 #SAMPLES = set(samples.sample) # unique sample names
-samples = config["tcga_lihc_rnaseq_paired_end_samples"]
+samples = config["tcga_lihc_rnaseq_females"]
 #print (samples)
 
 rule all:
 	input:
-		expand("{FQ_DIR}{sample}_rna_seq_1.fastq", FQ_DIR=FQ_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"]),
-		expand("{FQ_DIR}{sample}_rna_seq_2.fastq", FQ_DIR=FQ_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"]),
-		expand("{AL_DIR}{sample}_Aligned.sortedByCoord.out.bam", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"]),
+    	#expand(FQ_DIR + "{sample}_rna_seq_1", FQ_DIR=FQ_DIR, sample=config["tcga_lihc_rnaseq_females"]),
+    	#expand(FQ_DIR + "{sample}_rna_seq_2", FQ_DIR=FQ_DIR, sample=config["tcga_lihc_rnaseq_females"]),
+        #expand(["{FQ_DIR}{sample}_rna_seq_1.fastq", "{FQ_DIR}{sample}_rna_seq_2.fastq"], FQ_DIR=FQ_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"]"),
+        #expand("{FQ_DIR}{sample}_rna_seq_1.fastq", FQ_DIR=FQ_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"]),
+		#expand("{FQ_DIR}{sample}_rna_seq_2.fastq", FQ_DIR=FQ_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"]),
+		expand(AL_DIR + "{sample}_Aligned.sortedByCoord.out.bam", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_females"]),
 		#expand("{sample}_", sample=config["tcga_lihc_rnaseq_paired_end_samples"])
 	output:
-		#expand("{AL_DIR}{sample}_Aligned.sortedByCoord.out.bam", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"])
+		#expand(AL_DIR + "{sample}_Aligned.sortedByCoord.out.bam", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"])
 		#expand("{AL_DIR}{sample}_Aligned.sortedByCoord.out.bam", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"]),
 		#expand("{AL_DIR}{sample}_Aligned.sortedByCoord.out.bam.bai", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"])
 	params:
-		expand("{AL_DIR}{sample}_", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_paired_end_samples"])
+		expand("{AL_DIR}{sample}_", AL_DIR=AL_DIR, sample=config["tcga_lihc_rnaseq_females"])
+
+
 #rule star_index:
 #	input:
 #		ref=REF,
@@ -51,15 +56,15 @@ rule all:
 
 rule align_reads:
 	input:
-		R1=lambda wildcards: FQ_DIR + config["paired_fastqs"][wildcards.sample][0],
-		R2=lambda wildcards: FQ_DIR + config["paired_fastqs"][wildcards.sample][1],
+		R1= FQ_DIR + "{sample}_rna_seq_1.fastq",
+		R2= FQ_DIR + "{sample}_rna_seq_2.fastq",
 		star_index=STAR_INDEX,
 		gtf=GTF
 	output: AL_DIR + "{sample}_Aligned.sortedByCoord.out.bam"
 	params:
 		threads=24,
 		name_prefix=AL_DIR + "{sample}_"
-	message: "Mapping reads to {REF_NAME} with STAR. Threads: {params.threads}"
+	message: "Mapping {sample} reads to {REF_NAME} with STAR. Threads: {params.threads}"
 	shell:
 		"""
 		{STAR} --runThreadN {params.threads} --runMode alignReads
