@@ -1,27 +1,32 @@
-import os
+# Workflow for aligning RNA sequence data to a sex specific reference with
+# STAR, indexing BAM files with Samtools, and quantifying read counts with
+# HTSeq.
 
-configfile: "tcga_lihc.config.json"
+configfile: "tcga_lihc_testing.config.json"
 
 # Tools
 STAR = "STAR"
 SAMTOOLS = "samtools"
 HTSEQ = ""
 
-# Reference genome files
-REF = config["xx_GRCh38_ref_path"]
-REF_NAME = config["xx_GRCh38_ref_prefix"]
-GTF = config["xx_gtf_path"]
-STAR_INDEX = config["xx_star_index_dir"]
+# Reference genome files: XX with Y chromosome masked, XY with both X and Y
+XX_REF = config["xx_GRCh38_ref_path"]
+XX_REF_NAME = config["xx_GRCh38_ref_prefix"]
+XX_GTF = config["xx_gtf_path"]
+XX_STAR_INDEX = config["xx_star_index_dir"]
+XY_REF = config["xy_GRCh38_ref_path"]
+XY_REF_NAME = config["xy_GRCh38_ref_prefix"]
+XY_GTF = config["xy_gtf_path"]
+XY_STAR_INDEX = config["xy_star_index_dir"]
 
 # Directories
-FQ_DIR = config["tcga_lihc_rnaseq_fastq_dir"] # path to directory with fq files
-AL_DIR = config["tcga_lihc_rnaseq_realignment_dir"]
+FQ_DIR = config["tcga_lihc_rnaseq_stripped_fq_dir"] # path to directory with fastq files
+AL_DIR = config["tcga_lihc_rnaseq_realignment_dir"] # path to directory for alignment files
 
-# Getting unique fastq file and sample names
-#samples = glob_wildcards(os.path.join(FQ_DIR, "{sample}_rna_seq_1.fastq"))
-#SAMPLES = set(samples.sample) # unique sample names
-samples = config["tcga_lihc_rnaseq_females"]
-#print (samples)
+# Samples
+XX_SAMPLES = config["tcga_lihc_rnaseq_females"]
+XY_SAMPLES = config["tcga_lihc_rnaseq_males"]
+ALL_SAMPLES = config["tcga_lihc_rnaseq_samples"]
 
 rule all:
 	input:
@@ -47,14 +52,33 @@ rule all:
 #	output:
 #	params:
 #		threads=24
+#   message: "Generating STAR genome index files for reference {REF} and GTF {GTF}"
 #	shell:
 #		"""
 #		"{STAR} --runThreadN {params.threads} --runMode genomeGenerate "
 #		"--genomeDir {star_index} --genomeFastaFiles {input.ref} --sjdbGTFfile {gtf}; "
 #		"""
 
+rule xx_align_reads:
+	input:
+		R1=FQ_DIR + "{sample}_rna_seq_1.fastq",
+		R2=FQ_DIR + "{sample}_rna_seq_2.fastq",
+		star_index=STAR_INDEX,
+		gtf=GTF
+	output: AL_DIR + "{sample}_Aligned.sortedByCoord.out.bam"
+	params:
+		threads=24,
+		name_prefix=AL_DIR + "{sample}_"
+	message: "Mapping {sample} reads to {REF_NAME} with STAR. Threads: {params.threads}"
+	shell:
+		"""
+		{STAR} --runThreadN {params.threads} --runMode alignReads
+		--genomeDir {input.star_index} --outFileNamePrefix {params.name_prefix}
+		--readFilesIn {input.R1} {input.R2} --outSAMtype BAM SortedByCoordinate
+		--sjdbGTFfile {input.gtf}
+		"""
 
-rule align_reads:
+rule xy_align_reads:
 	input:
 		R1= FQ_DIR + "{sample}_rna_seq_1.fastq",
 		R2= FQ_DIR + "{sample}_rna_seq_2.fastq",
@@ -77,9 +101,17 @@ rule index_bam:
 	input:
 		BAM="{AL_DIR}{sample}_Aligned.sortedByCoord.out.bam"
 	output: "{AL_DIR}{sample}_Aligned.sortedByCoord.out.bam.bai"
-	message: "Indexing BAM with samtools"
+	message: "Indexing BAM file {BAM} with Samtools."
 	params:
 	shell:
 		"""
 		{SAMTOOLS} index {input.BAM}
 		"""
+
+#TODO:
+# rule quantify_readcounts:
+#   input:
+#   output:
+#   params:
+#   message: "Quantifying read counts with HTSeq"
+#   shell:

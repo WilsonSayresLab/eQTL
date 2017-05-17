@@ -1,12 +1,17 @@
+# Workflow for extracting FASTQ read files from BAM alignment files with
+# XYAlign --STRIP_READS.
 
-configfile: "tcga_lihc.config.json"
+configfile: "tcga_lihc_testing.config.json"
 
-#Directories
+# Tools
+XYALIGN="/home/hnatri/XYalign-noY_support/xyalign/xyalign.py"
+
+# Directories
 BAM_DIR=config["tcga_lihc_wgs_bam_dir"]
 FQ_DIR=config["tcga_lihc_wgs_stripped_fq_dir"]
 
-#Tools
-XYALIGN="/home/hnatri/XYalign-noY_support/xyalign/xyalign.py"
+# Samples
+SAMPLES = config["tcga_lihc_wgs_samples"]
 
 rule all:
 	input:
@@ -20,7 +25,7 @@ rule strip_reads:
         cpus="4",
         xmx="4g",
         compression="3"
-    message: "Stripping reads from {BAM_DIR}{sample}_wgs_Illumina.bam"
+    message: "Stripping reads from {BAM_DIR}{BAM}"
     shell:
         """
         python {XYALIGN} --STRIP_READS --ref null --bam {input.bam}
@@ -28,3 +33,13 @@ rule strip_reads:
         --output_dir {FQ_DIR} --chromosomes ALL
         --fastq-compression {params.compression}
         """
+
+#TODO:
+#rule move_fastqs:
+#   input:
+#   output:
+#   message:
+#   shell:
+#       """
+#       mv STRIPPED_FQ FQ_DIR
+#       """
