@@ -7,7 +7,7 @@ configfile: "tcga_lihc_testing.config.json"
 # Tools
 STAR = "STAR"
 SAMTOOLS = "samtools"
-HTSEQ = ""
+HTSEQ = "" # Path to HTSeq script htseq-count
 
 # Reference genome files: XX with Y chromosome masked, XY with both X and Y
 XX_REF = config["xx_GRCh38_ref_path"]
@@ -61,8 +61,8 @@ rule all:
 
 rule xx_align_reads:
 	input:
-		R1=FQ_DIR + "{sample}_rna_seq_1.fastq",
-		R2=FQ_DIR + "{sample}_rna_seq_2.fastq",
+		R1=FQ_DIR + "{sample}_1.fastq.gz",
+		R2=FQ_DIR + "{sample}_2.fastq.gz",
 		star_index=STAR_INDEX,
 		gtf=GTF
 	output: AL_DIR + "{sample}_Aligned.sortedByCoord.out.bam"
@@ -108,10 +108,23 @@ rule index_bam:
 		{SAMTOOLS} index {input.BAM}
 		"""
 
-#TODO:
-# rule quantify_readcounts:
-#   input:
-#   output:
-#   params:
-#   message: "Quantifying read counts with HTSeq"
-#   shell:
+rule quantify_readcounts:
+   input:
+        BAM="{}",
+        GET="{GTF}"
+    output:
+        COUNTS="{SAMPLE}_raw_gene_counts.tsv"
+    params:
+        FORMAT="bam", # Format of the input data
+        MODE="union", # Mode to handle reads overlapping more than one feature
+        TYPE="exon", # Feature type (3rd column in GFF file) to be used, all features of other type are ignored
+        ID_ATTRIBUTE="gene_id", # GFF attribute to be used as feature ID
+        ORDER="pos", # For paired-end data, the alignment have to be sorted either by read name or by alignment position.
+        STRANDED="no" # Whether the data is from a strand-specific assay
+    message: "Quantifying read counts with HTSeq"
+    shell:
+        """
+        python {HTSEQ} -m {params.MODE} -t {params.TYPE} -i
+        {params.ID_ATTRIBUTE} -f {params.FORMAT} -r {params.ORDER}
+        -s {params.STRANDED} {input.BAM} {input.GTF} > {output.COUNTS}
+        """
