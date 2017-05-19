@@ -1,4 +1,11 @@
 {
+
+	"test_dir": "/home/hnatri/eQTL/RNAseq_alignment/",
+	"test_sample": "OBG0044-1-010_S37_L005",
+	"test_fqs": {
+		"OBG0044-1-010_S37_L005": ["OBG0044-1-010_S37_L005_R1_001.fastq.gz", "OBG0044-1-010_S37_L005_R2_001.fastq.gz"]
+	},
+
 	"GRCh37_lite_ref_path": "",
 	"GRCh37_lite_ref_prefix": "",
 	"GRCh38_ref_path": "/mnt/storage/SAYRES/REFERENCE_GENOMES/UCSC_hg38/hg38.fa",
@@ -14,8 +21,9 @@
 	"xx_star_index_dir": "/mnt/storage/SAYRES/XY_Trim_Ref/references/gencode.GRCh38.p7_Ymasked",
 	"xy_star_index_dir": "/scratch/hnatri/hg38_STAR_index",
 
+	"dbnsfp": "/.../",
+	"dbnsfp_index": "/.../",
 	"dbsnp_vcf": "/.../",
-	"dbnsfp_vcf": "/.../",
 	"dbcosmic_vcf": "/.../",
 	"interval_bed": "/.../",
 
@@ -47,16 +55,19 @@
 	],
 
 	"tcga_lihc_rnaseq_males": [
-			"..."
+			"TCGA-DD-A3A4-01A-11R-A22L-07"
 	],
 
 	"tcga_lihc_rnaseq_females": [
 		"..."
 	],
 
-	"tcga_lihc_rnaseq_stripped_fqs": [
-		"..."
-	]
+	"tcga_lihc_rnaseq_stripped_fqs": {
+		"TCGA-DD-A3A4-01A-11R-A22L-07": [
+				"TCGA-DD-A3A4-01A-11R-A22L-07_1.fastq.gz",
+				"TCGA-DD-A3A4-01A-11R-A22L-07_2.fastq.gz"
+		]
+	},
 
 	"tcga_lihc_wes_bams": [
 		"..."
@@ -109,75 +120,76 @@
 	"tcga_lihc_rnaseq_samples_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"UNCID_2083934.3bf58509-d849-492e-85cc-665f1db2ccc7.sorted_genome_alignments.bam"
-		],
+		]
 	},
 
 	"tcga_lihc_rnaseq_paired_fastqs": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"...",
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_rnaseq_samples_realigned_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_wes_samples_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_wes_paired_fastqs": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"...",
 		"..."
-		],
+		]
 	},
 
-	"tcga_lihc_wes_samples_realigned_bams": {
+	"tcga_lihc_wgs_samples_realigned_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_wgs_samples_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_wgs_paired_fastqs": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"...",
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_wes_samples_realigned_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_mirna_samples_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"..."
-		],
+		]
 	},
 
 	"tcga_lihc_mirna_paired_fastqs": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"...",
 		"..."
-		],
+		]
 	},
 
-	"tcga_lihc_wes_samples_realigned_bams": {
+	"tcga_lihc_mirna_samples_realigned_bams": {
 		"TCGA-DD-A3A4-01A-11R-A22L-07": [
 		"..."
-		],
-	},
+		]
+	}
+}
