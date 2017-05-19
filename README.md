@@ -2,6 +2,8 @@
 
 This repository contains the code used in the eQTL project:
 
+Author: Heini Natri (heini.natri@asu.edu)
+
 Snakemake workflows:
   - Alignment
     - RNA-seq alignment with STAR
@@ -19,6 +21,6 @@ Snakemake workflows:
 	- SnpEff: dbSNP
 	- SnpSift: dbNSFP
   - eQTL detection
+	- PEER	
   - Downstream analyses
 
-Scripts for parsing sample information
