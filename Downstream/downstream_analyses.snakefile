@@ -20,3 +20,12 @@ rule edger:
 	message: "Running differential expression analysis with edgeR."
 	script:
 		"scripts/edgeR.R"
+
+rule gsea:
+	input:
+	output:
+	params:
+	message:
+	shell:
+		"""
+		"""
