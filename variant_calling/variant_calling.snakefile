@@ -22,8 +22,8 @@ configfile: "tcga_lihc_testing.config.json"
 
 # Tools
 SAMTOOLS = "samtools" # Path to samtools 1.4
-VARSCAN2 = "/packages/VarScan.v2.3.9.jar" # Path to VarScan2 .jar
-GATK = "gatk" # Path to GATK .jar
+VARSCAN2 = "/home/hnatri/VarScan.v2.4.3.jar"  # Path to VarScan2 v2.4 .jar file
+GATK = "/packages/6x/gatk/3.5.0/GenomeAnalysisTK.jar" # Path to GATK v3.5 .jar file
 BGZIP = "bgzip"
 TABIX = "tabix"
 FREEBAYES = "freebayes"
@@ -37,7 +37,7 @@ REF_FA_INDEX = config["GRCh38_ref_index_path"] # Reference FASTA index file (.fa
 # Database and interval files
 DBSNP = config["dbsnp_vcf"]
 COSMIC = config["dbcosmic_vcf"]
-INTERVAL_BED = config["interval_bed"]
+INTERVAL_BED = config["exome_interval_bed"]
 
 # Directories
 BAM_DIR = ""
@@ -231,18 +231,19 @@ rule gatk_haplotypecaller:
 # 	message: "Galling germline SNP and indel variants with Freebayes."
 # 	shell:
 # 		"""
-# 		freebayes-parallel <(fasta_generate_regions.py {input.REF_FA_INDEX} 100000)
-# 		{params.cores}
-# 		-f {input.REF}
-# 		{input.BAMs}
-# 		-p {params.ploidy}
-# 		--min-mapping-quality {params.min_mapping_quality}
-# 		--min-base-quality {params.min_base_quality}
-# 		--min-alternate-fraction {params.min_alternate_fraction}
-# 		--min-alternate-count {params.min_alternate_count}
-# 		--min-alternate-qsum {params.min_alternate_qsum}
-# 		--use-best-n-alleles {params.use_best_n_alleles}
-# 		--min-repeat-entropy {params.min_repeat_entropy}
+# 		freebayes-parallel <(fasta_generate_regions.py \
+#		{input.REF_FA_INDEX} 100000) \
+# 		{params.cores} \
+# 		-f {input.REF} \
+# 		{input.BAMs} \
+# 		-p {params.ploidy} \
+# 		--min-mapping-quality {params.min_mapping_quality} \
+# 		--min-base-quality {params.min_base_quality} \
+# 		--min-alternate-fraction {params.min_alternate_fraction} \
+# 		--min-alternate-count {params.min_alternate_count} \
+# 		--min-alternate-qsum {params.min_alternate_qsum} \
+# 		--use-best-n-alleles {params.use_best_n_alleles} \
+# 		--min-repeat-entropy {params.min_repeat_entropy} \
 # 		| vcffilter -f "QUAL > {input.phred}" > {output.VCF}
 # 		"""
 #
@@ -385,15 +386,19 @@ rule gatk_haplotypecaller:
 # 		"""
 # 		java -Xmx2g -jar {MUTECT}
 # 		--analysis_type MuTect
-# 		--reference_sequence {REF}
-# 		--cosmic {COSMIC_VCF}
-# 		--dbsnp {DBSNP_VCF}
-# 		--intervals {INTERVAL_BED}
-# 		--input_file:normal {input.NORMAL_BAM}
-# 		--input_file:tumor {input.TUMOR_BAM}
-# 		--out {output.CALL_STATS}}
-# 		--coverage_file {output.COVERAGE_WIG}
-# 		--min_qscore
+# 		--reference_sequence {REF} \
+# 		--cosmic {COSMIC_VCF} \
+# 		--dbsnp {DBSNP_VCF} \
+# 		--intervals {INTERVAL_BED} \
+# 		--input_file:normal {input.NORMAL_BAM} \
+# 		--input_file:tumor {input.TUMOR_BAM} \
+# 		--out {output.CALL_STATS} \
+# 		--coverage_file {output.COVERAGE_WIG} \
+# 		--min_qscore {params.min_qscore} \
+#		--gap_events_threshold {params.gap_events_threshold} \
+#		--heavily_clipped_read_fraction {params.heavily_clipped_read_fraction} \
+#		--max_alt_alleles_in_normal_count {params.max_alt_alleles_in_normal_count} \
+#		--max_alt_allele_in_normal_fraction {params.max_alt_allele_in_normal_fraction} \
 # 		--vcf
 # 		"""
 #
@@ -419,8 +424,8 @@ rule gatk_haplotypecaller:
 # 	message: "Calling somatic SNP variants with SomaticSniper."
 # 	shell:
 # 		"""
-# 		bam-somaticsniper -q {params.q} -Q {params.Q} {params.L} {params.G}
-# 		{params.p} {params.J} -s {params.s} -T {params.T} -N {params.N}
-# 		-r {params.r} -f {input.REF} {input.TUMOR_BAM} {input.NORMAL_BAM}
+# 		bam-somaticsniper -q {params.q} -Q {params.Q} {params.L} {params.G} \
+# 		{params.p} {params.J} -s {params.s} -T {params.T} -N {params.N} \
+# 		-r {params.r} -f {input.REF} {input.TUMOR_BAM} {input.NORMAL_BAM} \
 # 		-F {params.F} {output.VCF}
 # 		"""

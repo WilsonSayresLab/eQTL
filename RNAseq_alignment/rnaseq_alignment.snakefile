@@ -90,10 +90,12 @@ rule xy_align_reads:
 		star_index = XY_STAR_INDEX,
 		AL_DIR = AL_DIR,
 		gtf = XY_GTF
-	output: AL_DIR + "{sample}_Aligned.sortedByCoord.out.bam"
+	output: AL_DIR + "{sample}_Aligned.out.sam"
 	params:
 		threads = 24,
 		read_files_command = "zcat",
+		out_sam_type = "SAM", #  This ”unsorted” file can be directly used with downstream software such as HTseq, without the need of name sorting.
+		quant_mode = "GeneCounts"
 	message: "Mapping {wildcards.sample} reads to {XY_REF_NAME} with STAR. \
 	Threads: {params.threads}"
 	shell:
@@ -103,8 +105,30 @@ rule xy_align_reads:
 		--readFilesCommand {params.read_files_command} \
 		--outFileNamePrefix {input.AL_DIR}{wildcards.sample}_ \
 		--readFilesIn {input.R1} {input.R2} \
-		--outSAMtype BAM SortedByCoordinate \
+		--outSAMtype {params.out_sam_type} \
+		--quantMode {params.quant_mode} \
 		--sjdbGTFfile {input.gtf}
+		"""
+
+# rule sam_to_bam:
+# 	input:
+# 		BAM = AL_DIR + "{sample}_Aligned.out.sam"
+# 	output: AL_DIR + "{sample}_Aligned.out.bam"
+# 	params:
+# 	message: "Only output alignments with all bits set in 1 present in the FLAG field"
+# 	shell:
+# 		"""
+# 		{SAMTOOLS} view -bS {input.SAM} > {input.BAM}
+# 		"""
+
+rule sort_bam:
+	input:
+	output:
+	params:
+	message:
+	shell:
+		"""
+		{SAMTOOLS} sort {input.BAM} {input.OUTPUT_PREFIX}
 		"""
 
 rule index_bam:
@@ -118,12 +142,9 @@ rule index_bam:
 		{SAMTOOLS} index {input.BAM}
 		"""
 
-# TODO:
-# Does BAM header match GTF files' chromosome names?
-
-rule xy_quantify_readcounts:
+rule xy_htseq_quantify_readcounts:
 	input:
-		BAM = AL_DIR + "{sample}_Aligned.sortedByCoord.out.bam",
+		BAM = AL_DIR + "{sample}_Aligned.out.sam",
 		GTF = XY_GTF
 	output:
 		COUNTS = AL_DIR + "{sample}_raw_gene_counts.tsv"
@@ -137,9 +158,9 @@ rule xy_quantify_readcounts:
 	message: "Quantifying read counts from BAM file {input.BAM} with HTSeq"
 	shell:
 		"""
-		{SAMTOOLS} view -h {input.BAM} | \
-		{HTSEQ} -m {params.MODE} -t {params.TYPE} -i \
-		{params.ID_ATTRIBUTE} -f {params.FORMAT} -r {params.ORDER} \
+		{SAMTOOLS} view {input.BAM} | \
+		{HTSEQ} -m {params.MODE} -t {params.TYPE} -r {params.ORDER} \
+		-i {params.ID_ATTRIBUTE} -f {params.FORMAT} \
 		-s {params.STRANDED} - {input.GTF} > {output.COUNTS}
 		"""
 

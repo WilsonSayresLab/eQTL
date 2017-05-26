@@ -1,5 +1,6 @@
-# Workflow for PCA, identifying differentially expressed genes using edgeR and
-# runnin gene set enrichment analysis with GSEA.
+# Workflow for PCA, DE, and Go enrichment analysis with DEseq2,  identifying
+# differentially expressed genes using edgeR, and runnin gene set enrichment
+# analysis with GSEA.
 
 configfile: "tcga_lihc_testing.config.json"
 
@@ -22,8 +23,9 @@ GSETS = "" # Gene set names, comma delimited
 rule all:
 	input:
 
-rule pca:
+rule deseq:
 	input:
+		HTSEQ_COUNTS = HTSEQ_COUNTS
 	output:
 	params:
 	message:
@@ -32,7 +34,7 @@ rule pca:
 
 rule edger:
 	input:
-		COUNT_MATRIX = ""
+		COUNT_MATRIX = COUNT_MATRIX
 	output:
 		EDGER_RESULT = ""
 	params:
@@ -42,10 +44,10 @@ rule edger:
 
 rule gsea_gene_set_enrichment:
 	input:
-		EXP_DATA = ""
-		PHEN_DATA = ""
-		GENE_SETS = ""
-		OUTPUT_DIR = ""
+		EXP_DATA = EXP_DATA
+		PHEN_DATA = PHEN_DATA
+		GENE_SETS = GENE_SETS
+		OUTPUT_DIR = OUTPUT_DIR
 	output:
 	params:
 		xmx = "512m",
