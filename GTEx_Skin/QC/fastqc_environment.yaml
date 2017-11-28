@@ -1,0 +1,15 @@
+name: fastq_qc_read_trimming
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.5.1
+  - samtools=1.4
+  - snakemake=3.11.0
+  - pyyaml=3.11
+  - fastqc=0.11.5
+  - bbmap=37.17
+  - multiqc=1.0
+  - pandoc=1.19.2
+  - trimmomatic=0.36
