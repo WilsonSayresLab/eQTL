@@ -1,14 +1,8 @@
 # eQTL
 
-This repository contains the code used in the eQTL project:
+This repository contains the code used in the TCGA LIHC eQTL project:
 
-Snakemake workflows:
-  - Alignment
-    - RNA-seq alignment with STAR
-    - RNA-seq quantification with HTSeq
-    - DNA-seq alignment with bowtie2
-  - Variant calling and annotation
-  - eQTL detection
-  - Downstream analyses
-
-Scripts for parsing sample information
+- WES and RNAseq alignment using HISAT2
+- RNAseq gene expression quantification using featureCounts
+- Variant calling using GATK HaplotypeCaller
+- eQTL mapping using QTLtools
