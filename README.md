@@ -1,6 +1,8 @@
 # eQTL
 
-This repository contains the code used in the TCGA LIHC eQTL project:
+This repository contains the code used in the TCGA LIHC eQTL project.
+
+Author: Heini Natri (heini.natri@asu.edu)
 
 - WES and RNAseq alignment using HISAT2
 - RNAseq gene expression quantification using featureCounts
